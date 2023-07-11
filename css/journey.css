@@ -1,0 +1,227 @@
+.journey-tab {
+    position: relative;
+    margin-bottom: 3rem;
+    border: 1.5px solid var(--grey-border);
+    padding: var(--pad,2rem);
+    padding-bottom: var(--padb,1.5rem);
+    height: fit-content;
+    border-radius: 0.5rem;
+    background: var(--black-backdrop);
+    backdrop-filter: blur(2px);
+    /* transition: filter 0.4s; */
+    width: 100%;
+}
+
+
+.journey-tab.scroll-hidden.show:nth-child(1) {
+    transition: opacity 1s ease-in-out 100ms, transform 1s ease-in-out 100ms, filter 200ms ease-in-out;
+}
+
+
+
+
+.journey-tab.scroll-hidden.show:nth-child(2) {
+    transition: opacity 1s ease-in-out 300ms, transform 1s ease-in-out 300ms, filter 200ms ease-in-out;
+}
+
+
+.journey-tab.scroll-hidden.show:nth-child(3) {
+    transition: opacity 1s ease-in-out 500ms, transform 1s ease-in-out 500ms, filter 200ms ease-in-out;
+}
+
+
+.journey-container.flex {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.journey-tab.small {
+    /* aspect-ratio: 1.7; */
+    width: var(--size, 45%);
+    height: var(--size);
+}
+
+
+.journey-tab.small.scroll-hidden.show:nth-child(1) {
+    transition: opacity 1s ease-in-out 100ms, transform 1s ease-in-out 100ms, filter 200ms ease-in-out;
+}
+
+
+
+
+.journey-tab.small.scroll-hidden.show:nth-child(2) {
+    transition: opacity 1s ease-in-out 300ms, transform 1s ease-in-out 300ms, filter 200ms ease-in-out;
+}
+
+
+.journey-tab.small.scroll-hidden.show:nth-child(3) {
+    transition: opacity 1s ease-in-out 500ms, transform 1s ease-in-out 500ms, filter 200ms ease-in-out;
+}
+
+
+.journey-tab.small.scroll-hidden.show:nth-child(4) {
+    transition: opacity 1s ease-in-out 800ms, transform 1s ease-in-out 800ms, filter 200ms ease-in-out;
+}
+
+
+
+
+.journey-tab.small.scroll-hidden.show:nth-child(5) {
+    transition: opacity 1s ease-in-out 1100ms, transform 1s ease-in-out 1100ms, filter 200ms ease-in-out;
+}
+
+
+.journey-tab.small h4 {
+    margin: 1rem 0;
+}
+
+
+.journey-tab.small h3 {
+    text-align: center;
+}
+
+
+.journey-tab:hover {
+    filter: brightness(1.4);
+}
+
+
+.journey-tab h3 {
+    color: var(--purple);
+    margin-bottom: 0.5rem;
+}
+
+
+.journey-tab h4 {
+    width: 90%;
+}
+.journey-tab.scroll-hidden.top p {
+    width: 80%;
+}
+
+
+.journey-tab i {
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    color: var(--yellow);
+    position: absolute;
+    bottom: var(--pad,1rem);
+    right: var(--pad,1rem);
+    font-size: var(--h3-font-size);
+    transition: 0.4s;
+}
+
+
+.journey-text {
+    flex: 2;
+}
+
+
+.sub-text {
+    opacity: 0;
+    animation: fadetop 300ms ease-in-out forwards;
+    animation-delay: 500ms;
+    transition: height 500ms ease-in-out;
+    overflow: hidden;
+}
+
+.sub-text p {
+    padding-top: 0.5rem;
+}
+
+.sub-text:not(.active) {
+    display: none;
+}
+
+
+.journey-tab i[data-cur="0"] {
+    animation: rotationA forwards 500ms;
+}
+
+
+.journey-tab i[data-cur="180"] {
+    animation: rotation forwards 500ms;
+}
+@media (max-width:1050px) {
+    .journey-tab {
+        --pad:1.8rem;
+        --padb:1rem;
+    }
+
+
+    .journey-container.flex {
+        justify-content: center;
+    }
+
+
+    .journey-tab.small {
+        aspect-ratio: auto;
+        width: 100%;
+    }
+
+
+    .journey-tab.small h3 {
+        text-align: left;
+    }
+}
+
+
+@media (max-width:770px) {
+    .journey-tab {
+        --pad:1.3rem
+    }
+
+
+    .journey-tab i {
+        --pad: 0.8rem;
+    }
+}
+
+
+@media (max-width:500px) {
+    .journey-tab {
+        --pad:1rem
+    }
+
+
+    .journey-tab i {
+        --pad: 0.5rem;
+    }
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+
+@keyframes rotationA {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes fadetop {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
