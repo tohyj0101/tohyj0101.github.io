@@ -1,0 +1,147 @@
+.primary-header {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding-bottom: 5rem;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgb(7, 0, 41),rgba(5, 0, 31, 0.6), rgba(5, 0, 31, 0));
+    animation: fadedown 2s ease-in-out forwards;
+}
+
+.primary-header[data-home="true"] {
+    animation-delay: 4s;
+}
+
+.header-container {
+    pointer-events: all;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin: 2rem;
+}
+
+.breadcrumb h4 {
+    font-weight: 100;
+    letter-spacing: var(--header-spacing);
+}
+
+header a {
+    color: var(--banner-text);
+    font-weight: lighter;
+}
+
+.primary-navigation {
+    list-style: none;
+    gap: var(--gap, 1rem);
+    padding: 0 1rem;
+}
+
+.primary-navigation i {
+    font-size: larger;
+    background-color: transparent;
+}
+
+.primary-navigation a {
+    transition: 0.3s;
+    margin-inline-end: 0.75em;
+}
+
+.primary-navigation a:hover {
+    color: var(--purple-hover);
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.active a{
+    color: var(--purple);
+}
+
+@media (max-width: 1000px) {
+    .primary-navigation {
+
+        --gap: 3vh;
+        position: fixed;
+        height: 100%;
+        min-height: 100vh;
+
+        align-items: end;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        transform: translateX(100%);
+        padding: 20vh 5rem;
+        inset: 0 0 0 0%;
+        opacity: 0;
+        transition: transform 0s ease-in-out 450ms, opacity 400ms ease-in-out;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        margin: 2rem;
+        color: var(--banner-text);
+        font-size: larger;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: transform 0ms ease-in-out, opacity 400ms ease-in-out 200ms;
+    }
+
+    .primary-navigation li[data-visible="false"] {
+        opacity: 0;
+        transform: translateX(20%);
+        transition: 0s;
+    }
+
+    .primary-navigation li[data-visible="true"] {
+        opacity: 1;
+        transform: translateX(0);
+        transition: 0.3s;
+    }
+
+    .primary-header .rotate {
+        animation: rotation 500ms;
+    }
+
+    .primary-navigation a {
+        font-size: larger;
+    }
+
+
+}
+
+@keyframes fadedown {
+    from {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
