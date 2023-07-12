@@ -54,7 +54,7 @@ header a {
 }
 
 .primary-navigation a:hover {
-    color: var(--purple-hover);
+    color: var(--orange-hover);
 }
 
 .mobile-nav-toggle {
@@ -62,7 +62,7 @@ header a {
 }
 
 .active a{
-    color: var(--purple);
+    color: var(--orange);
 }
 
 @media (max-width: 1000px) {
