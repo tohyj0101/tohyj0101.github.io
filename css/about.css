@@ -69,7 +69,7 @@
 }
 
 .about-container button {
-    width: 50%;
+    width: 100%;
     border: none;
     border-radius: 0;
     background-color: var(--red-tint);
