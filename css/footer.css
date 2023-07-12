@@ -22,7 +22,7 @@
 
 
 .primary-footer i {
-    color: var(--purple);
+    color: var(--grey);
     font-size: larger;
     font-weight: bolder;
 }
@@ -56,7 +56,7 @@
 }
 
 .primary-footer li {
-    color: var(--purple);
+    color: var(--grey);
 }
 
 @media (max-width:400px) {
