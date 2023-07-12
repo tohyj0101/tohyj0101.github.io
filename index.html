@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio webpage of Toh Yong Jie" />
-    <meta name="keywords" content="portfolio,website,personal website" />
-    <meta name="author" content="Toh Yong Jie" />
-    <link rel="icon" type="image/png" href="/resources/icon.png">
+    <link rel="icon" href="resources/icon.png">
     <!-- Other CSS files -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -67,13 +64,13 @@
             <li data-visible="false" class="active page-landing">
               <a href="#">Home</a>
             </li>
-            <li data-visible="false" class="page">
+            <li data-visible="false" class="page-about">
               <a href="#about">About</a>
             </li>
-            <li data-visible="false" class="page">
+            <li data-visible="false" class="page-education">
               <a href="#education">Education</a>
             </li>
-            <li data-visible="false" class="page">
+            <li data-visible="false" class="page-experience">
               <a href="#experience">Experience</a>
             </li>
             <li data-visible="false" class="flex">
@@ -96,7 +93,7 @@
             <div class="name">
               <div class="flex">
                 <span class="red">
-                  <h1>#</h1>
+                  <h1>$</h1>
                 </span>
               </div>
               <div class="flex">
@@ -166,9 +163,8 @@
       </section>
     </section>
     <!-- About Me  -->
-    <section id="about" class="page">
-      <h1 class="title scroll-hidden top noanim">
-        <i class="fa-solid fa-address-card"></i> About <span class="subtitle">Me</span>
+    <section id="about" class="page-about">
+      <h1 class="title scroll-hidden top noanim">About <span class="subtitle">Me</span>
       </h1>
       <div class="about-container flex">
         <div class="image-container flex scroll-hidden left noanim">
@@ -177,32 +173,24 @@
         <div class="flex about-container-text">
           <div class="scroll-hidden right noanim">
             <h4>Hi there, My name is Yong Jie</h4>
-            <p>I graduated from Republic Polytechnic, Diploma in Infocomm Security Management.<p>
+            <script src="https://tryhackme.com/badge/1055492"></script>
           </div>
-          <div class="experience-container flex">
-            <div class="experience-tab scroll-hidden top noanim">
-              <script src="https://tryhackme.com/badge/1055492"></script>
-            </div>
-            <div class="experience-tab scroll-hidden top noanim">
-              <a href="https://www.credential.net/profile/tohyongjie/wallet">
-                <button class="scroll-hidden bottom noanim">Credentials</button>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Download Resume -->
-          <a href="resources/resume.pdf" target="_blank">
-            <button class="scroll-hidden bottom noanim"> Download Resume <i class="uil uil-download-alt"></i>
-            </button>
-          </a>
         </div>
+        <!-- Credentials -->
+        <a href="https://www.credential.net/profile/tohyongjie/wallet">
+          <button class="scroll-hidden bottom noanim"> Credentials</button>
+        </a>
+        <br><br>
+        <!-- Download Resume -->
+        <a href="resources/resume.pdf" target="_blank">
+          <button class="scroll-hidden bottom noanim"> Download Resume <i class="uil uil-download-alt"></i>
+          </button>
+        </a>
       </div>
     </section>
     <!-- Education -->
-    <section id="education" class="page">
-      <h2 class="comment scroll-hidden top noanim">
-        <i class="fa-solid fa-graduation-cap"></i> Education
-      </h2>
+    <section id="education" class="page-education">
+      <h2 class="comment scroll-hidden top noanim">Education</h2>
       <div class="journey-container">
         <div class="journey-tab scroll-hidden top">
           <div>
@@ -243,10 +231,8 @@
       </div>
     </section>
     <!-- Experience -->
-    <section id="experience" class="page">
-      <h2 class="comment scroll-hidden top noanim">
-        <i class="fa-solid fa-briefcase"></i> Experience
-      </h2>
+    <section id="experience" class="page-experience">
+      <h2 class="comment scroll-hidden top noanim">Experience</h2>
       <div class="journey-container flex">
         <div class="journey-tab small scroll-hidden left">
           <div>
@@ -262,7 +248,7 @@
             <h3>Sep 2022 - Jan 2023</h3>
             <div class="journey-text">
               <h4>A-ChieveMent Solution (S) Pte Ltd</h4>
-              <p>Information Technology Support Engineer (Internship)</p>
+              <p>Information Technology Support Engineer</p>
             </div>
           </div>
         </div>
