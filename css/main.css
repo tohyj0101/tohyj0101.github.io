@@ -14,10 +14,10 @@
     /* Default Colours */
     --theme-color:#191970;
     --dark-blue:#00008B;
-    --purple:#9244ff;
-    --dark-purple:#290062;
-    --purple-tint:#9244ffc7;
-    --purple-hover:#c79fff;
+    --orange:#9244ff;
+    --dark-orange:#290062;
+    --orange-tint:#9244ffc7;
+    --orange-hover:#c79fff;
     --red:#ff2e2e;
     --red-ball:#ff2d75;
     --red-tint: rgba(222, 77, 77, 0.741);
@@ -173,12 +173,12 @@ input {
 .comment {
     margin-top: 5rem;
     margin-bottom: 3rem;
-    color: var(--green);
+    color: var(--orange);
 }
 
 
 .subtitle {
-    color: var(--purple);
+    color: var(--orange);
 }
 
 
@@ -261,7 +261,7 @@ input {
 #dev .flex i {
     cursor: default;
     font-size: 5rem;
-    color: var(--purple);
+    color: var(--orange);
 }
 
 
