@@ -14,10 +14,10 @@
     /* Default Colours */
     --theme-color:#191970;
     --dark-blue:#00008B;
-    --orange:#9244ff;
-    --dark-orange:#290062;
-    --orange-tint:#9244ffc7;
-    --orange-hover:#c79fff;
+    --dark-orange:#ff5733;
+    --orange:#ffc300;
+    --orange-tint: rgba(155,195,0,0.741)
+    --orange-hover:##ff5733;
     --red:#ff2e2e;
     --red-ball:#ff2d75;
     --red-tint: rgba(222, 77, 77, 0.741);
@@ -34,9 +34,7 @@
     --grey-border: rgba(255, 255, 255, 0.327);
     --grey-border-2:#dadada24;
     --black-backdrop: rgba(2, 0, 14, 0.3);
-    --dark-orange:#ff5733;
-    --orange:#ffc300;
-    --orange-tint: rgba(155,195,0,0.741)
+    
 
 
     --wrapper: 15vw;
