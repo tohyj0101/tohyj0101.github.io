@@ -33,10 +33,6 @@
         color: var(--red);
     }
 
-    #landing .yellow:hover > h1 {
-        color: var(--yellow);
-    }
-
     #landing .flex.title p {
         margin-top: 1rem;
         opacity: 0;
