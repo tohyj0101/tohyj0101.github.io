@@ -1,66 +1,60 @@
 .primary-footer * {
-    margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .footer-text {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .primary-footer {
-    z-index: 1000;
-    justify-content: center;
-    gap: 6vh;
-    flex-direction: column;
-    height: 50vh;
-    width: 100%;
-    background: var(--footer-colour);
-    padding: 0 10vw;
+  z-index: 1000;
+  justify-content: center;
+  gap: 6vh;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+  background: var(--footer-colour);
+  padding: 0 10vw;
 }
-
 
 .primary-footer i {
-    color: var(--grey);
-    font-size: larger;
-    font-weight: bolder;
+  color: var(--grey);
+  font-size: larger;
+  font-weight: bolder;
 }
-
 
 .primary-footer .flex {
-    gap: 4rem;
-    width: 100%;
+  gap: 4rem;
+  width: 100%;
 }
-
 
 .primary-footer h4 {
-    font-weight: 200;
-    padding: 0;
-    color: var(--theme-colour);
-    letter-spacing: var(--header-spacing);
-    margin-left: var(--header-spacing);
+  font-weight: 200;
+  padding: 0;
+  color: var(--theme-colour);
+  letter-spacing: var(--header-spacing);
+  margin-left: var(--header-spacing);
 }
-
 
 .primary-footer p {
-    font-size: smaller;
-    width: 100%;
-    text-align: center;
+  font-size: smaller;
+  width: 100%;
+  text-align: center;
 }
 
-
 .primary-footer .flex {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .primary-footer li {
-    color: var(--grey);
+  color: var(--grey);
 }
 
-@media (max-width:400px) {
-    .primary-footer p {
-        font-size: 0.7rem;
-    }
+@media (max-width: 400px) {
+  .primary-footer p {
+    font-size: 0.7rem;
+  }
 }
