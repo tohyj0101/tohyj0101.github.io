@@ -1,110 +1,112 @@
-
 /* Landing Page */
 #landing {
-    position: relative;
-    width: 100%;
-    height: 90vh;
+  position: relative;
+  width: 100%;
+  height: 90vh;
 }
-    .flex {
-        display: flex;
-    }
+.flex {
+  display: flex;
+}
 
-    #landing .name {
-        display: flex;
-        gap: 2rem;
-    }
-    #landing .title {
-        height: 100%;
-        align-items: center;
-    }
+#landing .name {
+  display: flex;
+  gap: 2rem;
+}
+#landing .title {
+  height: 100%;
+  align-items: center;
+}
 
-    #landing span {
-        opacity: 0;
-        animation: appear 0s forwards;
-    }
-    #landing .red, #landing .yellow {
-        transition: 0.1s;
-    }
-    #landing .red:hover,  #landing .yellow:hover{
-        transform: scale(1.2);
-    }
-    
-    #landing .red:hover > h1 {
-        color: var(--red);
-    }
+#landing span {
+  opacity: 0;
+  animation: appear 0s forwards;
+}
+#landing .red,
+#landing .yellow {
+  transition: 0.1s;
+}
+#landing .red:hover,
+#landing .yellow:hover {
+  transform: scale(1.2);
+}
 
-    #landing .flex.title p {
-        margin-top: 1rem;
-        opacity: 0;
-        animation: fadeup 1s forwards;
-        animation-delay: 4000ms;
-    }
+#landing .red:hover > h1 {
+  color: var(--red);
+}
 
-    #landing .scroll {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 2rem;
-    }
+#landing .flex.title p {
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeup 1s forwards;
+  animation-delay: 4000ms;
+}
 
-    #landing .scroll * {
-        width: 100%;
-        opacity: 0;
-        text-align: center;
-        color: var(--banner-text);
-        cursor: default;
-        animation: fadeup 1s forwards;
-        animation-delay: 4500ms;
-    }
+#landing .scroll {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+}
 
-    #landing .scroll p {
-        margin-top: 0.5rem;
-    }
+#landing .scroll * {
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  color: var(--banner-text);
+  cursor: default;
+  animation: fadeup 1s forwards;
+  animation-delay: 4500ms;
+}
 
-    #landing h1 {
-        font-size: var(--h1-font-size);
-    }
+#landing .scroll p {
+  margin-top: 0.5rem;
+}
 
-    #landing p {
-        font-size: var(--p-font-size);
-        line-height: 150%;
-    }
+#landing h1 {
+  font-size: var(--h1-font-size);
+}
 
-    @media (max-width:460px) {
-        #landing h1 {
-            font-size: 13vw;
-        }
+#landing p {
+  font-size: var(--p-font-size);
+  line-height: 150%;
+}
 
-        #landing p {
-            font-size: var(--p-font-size-s);
-        }
-    }
+@media (max-width: 460px) {
+  #landing h1 {
+    font-size: 13vw;
+  }
 
-    @media (max-width:320px) {
-        #landing h1 {
-            line-height: 150%;
-        }
-        #landing p {
-            font-size: var(--p-font-size-ss);
-            line-height: 180%;
-        }
-    }
-    
+  #landing p {
+    font-size: var(--p-font-size-s);
+  }
+}
+
+@media (max-width: 320px) {
+  #landing h1 {
+    line-height: 150%;
+  }
+  #landing p {
+    font-size: var(--p-font-size-ss);
+    line-height: 180%;
+  }
+}
+
 @keyframes appear {
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeup {
-    from {
-        opacity: 0;
-        transform: translateY(20%)
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0%);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
