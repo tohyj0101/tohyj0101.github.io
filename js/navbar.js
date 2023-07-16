@@ -50,32 +50,32 @@ function navScroll() {
 		var landing_height = document.querySelector("#landing").getBoundingClientRect().height;
 		var about = document.querySelector(".page-about");
 		var about_height = document.querySelector("#about").getBoundingClientRect().height;
-		var services = document.querySelector(".page-services");
-		var services_height = document.querySelector("#services").getBoundingClientRect().height;
-		var portfolio = document.querySelector(".page-portfolio");
-		var portfolio_height = document.querySelector("#portfolio").getBoundingClientRect().height;
+		var education = document.querySelector(".page-education");
+		var education_height = document.querySelector("#education").getBoundingClientRect().height;
+		var experience = document.querySelector(".page-experience");
+		var experience_height = document.querySelector("#experience").getBoundingClientRect().height;
 
 
 		if (top < landing_height) {
 			landing.classList.add('active');
 			about.classList.remove('active');
-			services.classList.remove('active');
-			portfolio.classList.remove('active');
+			education.classList.remove('active');
+			experience.classList.remove('active');
 		} else if (top >= landing_height && top <= landing_height + about_height) {
 			landing.classList.remove('active');
 			about.classList.add('active');
-			services.classList.remove('active');
-			portfolio.classList.remove('active');
-		} else if (top >= landing_height + about_height && top <= landing_height + about_height + services_height) {
+			education.classList.remove('active');
+			experience.classList.remove('active');
+		} else if (top >= landing_height + about_height && top <= landing_height + about_height + education_height) {
 			landing.classList.remove('active');
 			about.classList.remove('active');
-			services.classList.add('active');
-			portfolio.classList.remove('active');
-		} else if (top >= landing_height + about_height + services_height + vh(20)) {
+			education.classList.add('active');
+			experience.classList.remove('active');
+		} else if (top >= landing_height + about_height + education_height + vh(20)) {
 			landing.classList.remove('active');
 			about.classList.remove('active');
-			services.classList.remove('active');
-			portfolio.classList.add('active');
+			education.classList.remove('active');
+			experience.classList.add('active');
 		}
 	}
 }
