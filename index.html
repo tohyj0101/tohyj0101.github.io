@@ -5,17 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toh Yong Jie - Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
       body {
         padding-top: 56px;
       }
-
       .navbar {
         margin-bottom: 20px;
       }
-
+      .hero {
+        background: url('https://via.placeholder.com/1500x400') no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 4rem;
+      }
       .card {
         margin-bottom: 20px;
+      }
+      .skills i {
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+      footer {
+        background: #f8f9fa;
+        padding: 20px 0;
+      }
+      footer p {
+        margin: 0;
       }
     </style>
   </head>
@@ -45,6 +68,12 @@
         </ul>
       </div>
     </nav>
+    <header class="hero">
+      <div class="container">
+        <h1>Toh Yong Jie</h1>
+        <p>Cybersecurity Enthusiast | IT Support Engineer</p>
+      </div>
+    </header>
     <div class="container">
       <section id="about" class="my-5">
         <h2>About Me</h2>
@@ -52,47 +81,63 @@
       </section>
       <section id="education" class="my-5">
         <h2>Education</h2>
-        <ul>
-          <li>
-            <h5>Diploma in Infocomm Security Management</h5>
-            <p>Republic Polytechnic, 2020 - 2023</p>
-          </li>
-          <li>
-            <h5>Singapore-Cambridge General Certificate of Education Ordinary Level (GCE O-Level)</h5>
-            <p>Chua Chu Kang Secondary School, 2015 - 2019</p>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Diploma in Infocomm Security Management</h5>
+                <p class="card-text">Republic Polytechnic, 2020 - 2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Singapore-Cambridge General Certificate of Education Ordinary Level (GCE O-Level)</h5>
+                <p class="card-text">Chua Chu Kang Secondary School, 2015 - 2019</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="experience" class="my-5">
         <h2>Experience</h2>
-        <ul>
-          <li>
-            <h5>Full-Time National Serviceman (NSF)</h5>
-            <p>Singapore Armed Forces, Jul 2023 - Present</p>
-            <ul>
-              <li>Military Police</li>
-              <li>Military Police Basic Course</li>
-              <li>Basic Military Training (BMT)</li>
-            </ul>
-          </li>
-          <li>
-            <h5>Information Technology Support Engineer (Intern)</h5>
-            <p>A-ChieveMent Solution(S) Pte Ltd, Sep 2022 - Jan 2023</p>
-            <ul>
-              <li>Installing and configuring client computer systems.</li>
-              <li>Responding to client IT support requests.</li>
-              <li>Compiling job reports.</li>
-            </ul>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Full-Time National Serviceman (NSF)</h5>
+                <p class="card-text">Singapore Armed Forces, Jul 2023 - Present</p>
+                <ul>
+                  <li>Military Police</li>
+                  <li>Military Police Basic Course</li>
+                  <li>Basic Military Training (BMT)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Information Technology Support Engineer (Intern)</h5>
+                <p class="card-text">A-ChieveMent Solution(S) Pte Ltd, Sep 2022 - Jan 2023</p>
+                <ul>
+                  <li>Installing and configuring client computer systems.</li>
+                  <li>Responding to client IT support requests.</li>
+                  <li>Compiling job reports.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="skills" class="my-5">
         <h2>Skills</h2>
-        <ul>
-          <li>Cybersecurity</li>
-          <li>Problem Solving</li>
-          <li>Critical Thinking</li>
-        </ul>
+        <div class="skills">
+          <i class="fas fa-shield-alt"></i> Cybersecurity
+          <i class="fas fa-lightbulb"></i> Problem Solving
+          <i class="fas fa-brain"></i> Critical Thinking
+        </div>
       </section>
       <section id="contact" class="my-5">
         <h2>Contact</h2>
@@ -101,7 +146,6 @@
         <p>GitHub: <a href="https://github.com/tohyj0101">GitHub Profile</a></p>
       </section>
     </div>
-    <!-- Footer -->
     <footer class="footer bg-light py-3">
       <div class="container">
         <p class="text-center">&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved.</p>
