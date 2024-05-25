@@ -5,6 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      nav ul li a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      nav ul li a:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+      nav ul li a:hover {
+        color: #f39c12;
+      }
+      section {
+        padding: 60px 0;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -91,7 +151,7 @@
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:tohyj0101@gmail.com">ytohyj0101@gmail.com</a></p>
+        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/tohyj">LinkedIn Profile</a></p>
         <p>GitHub: <a href="https://github.com/tohyj0101">GitHub Profile</a></p>
       </div>
