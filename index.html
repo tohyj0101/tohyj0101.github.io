@@ -3,61 +3,71 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toh Yong Jie - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Toh Yong Jie's personal portfolio showcasing education, experience, skills, and certifications in cybersecurity and IT support.">
-    <meta name="keywords" content="Toh Yong Jie, cybersecurity, IT support, portfolio, resume, national serviceman, NSF">
+    <title>Toh Yong Jie - Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 56px;
+      }
+
+      .navbar {
+        margin-bottom: 20px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Toh Yong Jie</h1>
-        <p>Full-Time National Serviceman (NSF)</p>
-        <nav>
-          <ul>
-            <li><a href="#about" aria-label="About section">About</a></li>
-            <li><a href="#education" aria-label="Education section">Education</a></li>
-            <li><a href="#experience" aria-label="Experience section">Experience</a></li>
-            <li><a href="#skills" aria-label="Skills section">Skills</a></li>
-            <li><a href="#certifications" aria-label="Certifications section">Certifications</a></li>
-            <li><a href="#contact" aria-label="Contact section">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>I am a Diploma in Infocomm Security Management graduate with a passion for protecting systems and data from cyber threats. With a strong background in network security, ethical hacking, and incident response, I am committed to ensuring the highest levels of security and integrity for organizations.</p>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-      <div class="container">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <h3>Diploma in Infocomm Security Management</h3>
-            <p>Republic Polytechnic, 2020 - 2023</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Toh Yong Jie</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
           </li>
-          <li>
-            <h3>Singapore-Cambridge General Certificate of Education Ordinary Level (GCE O-Level)</h3>
-            <p>Chua Chu Kang Secondary School, 2015 - 2019</p>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <div class="container">
+    </nav>
+    <div class="container">
+      <section id="about" class="my-5">
+        <h2>About Me</h2>
+        <p>I am a Diploma in Infocomm Security Management graduate with a passion for protecting systems and data from cyber threats. With a strong background in network security, ethical hacking, and incident response, I am committed to ensuring the highest levels of security and integrity for organizations.</p>
+      </section>
+      <section id="education" class="my-5">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h5>Diploma in Infocomm Security Management</h5>
+            <p>Republic Polytechnic, 2020 - 2023</p>
+          </li>
+          <li>
+            <h5>Singapore-Cambridge General Certificate of Education Ordinary Level (GCE O-Level)</h5>
+            <p>Chua Chu Kang Secondary School, 2015 - 2019</p>
+          </li>
+        </ul>
+      </section>
+      <section id="experience" class="my-5">
         <h2>Experience</h2>
         <ul>
           <li>
-            <h3>Full-Time National Serviceman (NSF)</h3>
+            <h5>Full-Time National Serviceman (NSF)</h5>
             <p>Singapore Armed Forces, Jul 2023 - Present</p>
             <ul>
               <li>Military Police</li>
@@ -66,7 +76,7 @@
             </ul>
           </li>
           <li>
-            <h3>Information Technology Support Engineer (Intern)</h3>
+            <h5>Information Technology Support Engineer (Intern)</h5>
             <p>A-ChieveMent Solution(S) Pte Ltd, Sep 2022 - Jan 2023</p>
             <ul>
               <li>Installing and configuring client computer systems.</li>
@@ -75,53 +85,36 @@
             </ul>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
+      </section>
+      <section id="skills" class="my-5">
         <h2>Skills</h2>
         <ul>
           <li>Cybersecurity</li>
           <li>Problem Solving</li>
           <li>Critical Thinking</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-      <div class="container">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Diploma in Infocomm Security Management</li>
-          <li>
-            <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" aria-label="View Credentials">View Credentials</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
+      </section>
+      <section id="contact" class="my-5">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tohyj" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/tohyj0101" target="_blank">GitHub Profile</a></p>
-      </div>
-    </section>
-
+        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a>
+        </p>
+        <p>LinkedIn: <a href="https://www.linkedin.com">LinkedIn Profile</a>
+        </p>
+        <p>GitHub: <a href="https://github.com">GitHub Profile</a>
+        </p>
+      </section>
+    </div>
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved.</p>
+        <p>&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved. </p>
       </div>
     </footer>
-
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
