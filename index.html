@@ -8,14 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
       body {
-        padding-top: 56px;
-        scroll-behavior: smooth;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
       }
+
       .navbar {
-        margin-bottom: 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-link {
+        font-size: 1.1rem;
+      }
+
       .hero {
-        background: url('https://via.placeholder.com/1500x400') no-repeat center center;
+        background: url('https://via.placeholder.com/1500x800') no-repeat center center;
         background-size: cover;
         color: white;
         height: 100vh;
@@ -24,11 +39,10 @@
         align-items: center;
         text-align: center;
         flex-direction: column;
-        animation: fadeIn 2s;
         position: relative;
         z-index: 1;
-        overflow: hidden;
       }
+
       .hero::before {
         content: '';
         position: absolute;
@@ -39,101 +53,113 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: -1;
       }
+
       .hero h1 {
         font-size: 4rem;
         margin-bottom: 20px;
+        font-weight: bold;
       }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
       .hero .btn {
-        margin-top: 20px;
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
         transition: background 0.3s;
       }
+
       .hero .btn:hover {
         background: #0056b3;
       }
-      .card {
+
+      .container {
+        padding: 60px 15px;
+      }
+
+      h2 {
+        font-size: 2.5rem;
         margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      p,
+      li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
         transition: transform 0.3s, box-shadow 0.3s;
       }
+
       .card:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
+
       .section-divider {
-        border-bottom: 1px solid #dee2e6;
+        border-bottom: 1px solid #e0e0e0;
         margin: 40px 0;
       }
-      .skills i {
-        font-size: 2rem;
-        margin-right: 10px;
-        transition: transform 0.3s, color 0.3s;
-        display: inline-block;
-        animation: bounce 2s infinite;
-      }
-      .skills i:hover {
-        transform: scale(1.2);
-        color: #007bff;
-      }
+
       footer {
         background: #f8f9fa;
         padding: 20px 0;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
       }
+
       footer p {
         margin: 0;
+        font-size: 1rem;
       }
+
       .footer-icons a {
         margin: 0 10px;
-        color: #495057;
+        color: #333;
         transition: color 0.3s, transform 0.3s;
       }
+
       .footer-icons a:hover {
         color: #007bff;
         transform: translateY(-5px);
       }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
-          transform: translateY(0);
-        }
-        40% {
-          transform: translateY(-10px);
-        }
-        60% {
-          transform: translateY(-5px);
-        }
-      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">Toh Yong Jie</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Toh Yong Jie</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <header class="hero">
@@ -207,22 +233,23 @@
       <section id="skills" class="my-5">
         <h2>Skills</h2>
         <div class="skills">
-          <i class="fas fa-shield-alt"></i> Cybersecurity
-          <i class="fas fa-lightbulb"></i> Problem Solving
-          <i class="fas fa-brain"></i> Critical Thinking
+          <i class="fas fa-shield-alt"></i> Cybersecurity <i class="fas fa-lightbulb"></i> Problem Solving <i class="fas fa-brain"></i> Critical Thinking
         </div>
       </section>
       <div class="section-divider"></div>
       <section id="contact" class="my-5">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tohyj">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/tohyj0101">GitHub Profile</a></p>
+        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a>
+        </p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tohyj">LinkedIn Profile</a>
+        </p>
+        <p>GitHub: <a href="https://github.com/tohyj0101">GitHub Profile</a>
+        </p>
       </section>
     </div>
     <footer class="footer bg-light py-3">
       <div class="container">
-        <p class="text-center">&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved.</p>
+        <p class="text-center">&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved. </p>
       </div>
     </footer>
     <script>
