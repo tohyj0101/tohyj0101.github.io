@@ -218,6 +218,38 @@ section h2 {
     font-size: 1rem;
 }
 
+/* Experience Section */
+#experience {
+    padding: 40px 20px;
+    background: #f4f4f9;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.experience {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.experience h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.experience p {
+    font-size: 1rem;
+}
+
 /* Contact Section */
 #contact {
     padding: 40px 20px;
