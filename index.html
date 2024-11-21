@@ -1,262 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toh Yong Jie - Portfolio</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Professional Portfolio</title>
     <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
-
-      .navbar {
-        background-color: #f8f9fa;
-        border-bottom: 1px solid #e0e0e0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-
-      .nav-link {
-        font-size: 1.1rem;
-      }
-
-      .hero {
-        background: url('https://via.placeholder.com/1500x800') no-repeat center center;
-        background-size: cover;
-        color: white;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: -1;
-      }
-
-      .hero h1 {
-        font-size: 4rem;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-
-      .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-      }
-
-      .hero .btn {
-        background-color: #007bff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        transition: background 0.3s;
-      }
-
-      .hero .btn:hover {
-        background: #0056b3;
-      }
-
-      .container {
-        padding: 60px 15px;
-      }
-
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-
-      p,
-      li {
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-
-      .card {
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 40px;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .section-divider {
-        border-bottom: 1px solid #e0e0e0;
-        margin: 40px 0;
-      }
-
-      footer {
-        background: #f8f9fa;
-        padding: 20px 0;
-        border-top: 1px solid #e0e0e0;
-        text-align: center;
-      }
-
-      footer p {
-        margin: 0;
-        font-size: 1rem;
-      }
-
-      .footer-icons a {
-        margin: 0 10px;
-        color: #333;
-        transition: color 0.3s, transform 0.3s;
-      }
-
-      .footer-icons a:hover {
-        color: #007bff;
-        transform: translateY(-5px);
-      }
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #0077b5, #004a80);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            animation: fadeIn 1s ease-out;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f4f4f4;
+        }
+        /* About Section */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .about {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .profile-pic {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            background: url('https://via.placeholder.com/150') no-repeat center center;
+            background-size: cover;
+            border: 4px solid #0077b5;
+            animation: zoomIn 1s ease-out;
+        }
+        h2 {
+            color: #0077b5;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.1em;
+        }
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .skill-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .skill-card h3 {
+            color: #0077b5;
+            font-size: 1.2em;
+        }
+        /* Contact Section */
+        .contact {
+            background: #0077b5;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 40px 0;
+        }
+        .contact a {
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .contact a:hover {
+            background: white;
+            color: #0077b5;
+        }
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Toh Yong Jie</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <header class="hero">
-      <div class="container">
-        <h1>Toh Yong Jie</h1>
-        <p>Cybersecurity Enthusiast | IT Support Engineer</p>
-        <a href="#about" class="btn btn-primary">Learn More</a>
-      </div>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Professional Portfolio | Let’s Connect</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
+
     <div class="container">
-      <div class="section-divider"></div>
-      <section id="about" class="my-5">
-        <h2>About Me</h2>
-        <p>I am a Diploma in Infocomm Security Management graduate with a passion for protecting systems and data from cyber threats. With a strong background in network security, ethical hacking, and incident response, I am committed to ensuring the highest levels of security and integrity for organizations.</p>
-      </section>
-      <div class="section-divider"></div>
-      <section id="education" class="my-5">
-        <h2>Education</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Diploma in Infocomm Security Management</h5>
-                <p class="card-text">Republic Polytechnic, 2020 - 2023</p>
-              </div>
+        <section id="about" class="about">
+            <div class="profile-pic"></div>
+            <h2>About Me</h2>
+            <p>Welcome to my professional portfolio! I am a dedicated expert in [your field/industry], with a strong passion for delivering impactful results. My experience spans across [your expertise], focusing on innovation and excellence. Visit my LinkedIn profile to learn more about my journey and achievements.</p>
+            <p><a href="https://www.linkedin.com/in/tohyj" target="_blank">linkedin.com/in/tohyj</a></p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>Leadership</h3>
+                    <p>Driving teams to success with a focus on collaboration and results.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Project Management</h3>
+                    <p>Expertise in managing complex projects and ensuring timely delivery.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Technical Skills</h3>
+                    <p>Proficient in [list technical tools or programming languages].</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Communication</h3>
+                    <p>Exceptional verbal and written communication skills.</p>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Singapore-Cambridge General Certificate of Education Ordinary Level (GCE O-Level)</h5>
-                <p class="card-text">Chua Chu Kang Secondary School, 2015 - 2019</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="section-divider"></div>
-      <section id="experience" class="my-5">
-        <h2>Experience</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Full-Time National Serviceman (NSF)</h5>
-                <p class="card-text">Singapore Armed Forces, Jul 2023 - Present</p>
-                <ul>
-                  <li>Military Police</li>
-                  <li>Military Police Basic Course</li>
-                  <li>Basic Military Training (BMT)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Information Technology Support Engineer (Intern)</h5>
-                <p class="card-text">A-ChieveMent Solution(S) Pte Ltd, Sep 2022 - Jan 2023</p>
-                <ul>
-                  <li>Installing and configuring client computer systems.</li>
-                  <li>Responding to client IT support requests.</li>
-                  <li>Compiling job reports.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="section-divider"></div>
-      <section id="skills" class="my-5">
-        <h2>Skills</h2>
-        <div class="skills">
-          <i class="fas fa-shield-alt"></i> Cybersecurity <i class="fas fa-lightbulb"></i> Problem Solving <i class="fas fa-brain"></i> Critical Thinking
-        </div>
-      </section>
-      <div class="section-divider"></div>
-      <section id="contact" class="my-5">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:tohyj0101@gmail.com">tohyj0101@gmail.com</a>
-        </p>
-        <p>GitHub: <a href="https://github.com/tohyj0101"><i class="fab fa-github" style="font-size: 2em; margin-right: 10px;"></i></a>
-        </p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tohyj"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-        </p>
-      </section>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Let’s collaborate or connect professionally.</p>
+            <a href="https://www.linkedin.com/in/tohyj" target="_blank">Visit My LinkedIn</a>
+            <a href="mailto:your.email@example.com">Email Me</a>
+        </section>
     </div>
-    <footer class="footer bg-light py-3">
-      <div class="container">
-        <p class="text-center">&copy; <span id="year"></span> Toh Yong Jie. All Rights Reserved. </p>
-      </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name | <a href="https://www.linkedin.com/in/tohyj" target="_blank">LinkedIn</a></p>
     </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
