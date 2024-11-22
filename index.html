@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Toh Yong Jie">
-    <title>Toh Yong Jie</title>
+    <title>Toh Yong Jie - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Toh Yong Jie</div>
-            <ul>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="logo" role="heading" aria-level="1">Toh Yong Jie</div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+            <ul id="nav-list" aria-hidden="true">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certificates">Certificates</a></li>
@@ -22,143 +23,105 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home">
-            <div class="home-content">
-                <h1>Welcome to My Portfolio</h1>
-                <p>I’m Toh Yong Jie, an NSF with a passion for Infocomm Security.</p>
-                <a href="#about" class="btn">Learn More</a>
-            </div>
-        </section>
+    <section id="home">
+        <div class="home-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I’m Toh Yong Jie, an NSF with a passion for Infocomm Security.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <img src="assets/images/profile.jpg" alt="Toh Yong Jie" class="profile-img">
-                <p>Hi! I’m Toh Yong Jie. I am currently serving national service as a Military Policeman. I hold a diploma in Infocomm Security Management from Republic Polytechnic and have a strong foundation in cybersecurity and machine learning.</p>
-            </div>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="assets/images/profile.jpg" alt="Toh Yong Jie" class="profile-img">
+            <p>Hi! I’m Toh Yong Jie. I am currently serving national service as a Military Policeman. I hold a diploma in Infocomm Security Management from Republic Polytechnic and have a strong foundation in cybersecurity and machine learning.</p>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <h3>Cybersecurity</h3>
-                    <p>Proficient in protecting systems and networks from threats, and securing sensitive data.</p>
-                </div>
-                <div class="skill">
-                    <h3>Machine Learning</h3>
-                    <p>Skilled in using machine learning algorithms to build predictive models and analyze data.</p>
-                </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>Cybersecurity</h3>
+                <p>Proficient in protecting systems and networks from threats, and securing sensitive data.</p>
             </div>
-        </section>
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <p>Skilled in using machine learning algorithms to build predictive models and analyze data.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="certificates">
-            <h2>Certificates</h2>
-            <div class="certificates-list">
-                <div class="certificate">
-                    <h3>AI FOR INDUSTRY® - Literacy In AI</h3>
-                    <p>Issued by AI Singapore | Year Attained: 2023</p>
-                    <a href="https://certified.aisingapore.org/74c02184-c7b5-41c2-8a77-9299bf28a3ef" target="_blank">View AI FOR INDUSTRY® Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Digital Forensics Essentials (DFE)</h3>
-                    <p>Issued by codered | Year Attained: 2023</p>
-                    <a href="https://codered.eccouncil.org/certificate/36c0cf49-8cae-41cd-b0f8-32f6f8b8f74c?logged=false" target="_blank">View Digital Forensics Essentials Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Ethical Hacking Essentials (EHE)</h3>
-                    <p>Issued by codered | Year Attained: 2023</p>
-                    <a href="https://codered.eccouncil.org/certificate/5146c0c2-3df8-4ed3-8310-b81e44da81ac?logged=false" target="_blank">View Ethical Hacking Essentials Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Network Defense Essentials (NDE)</h3>
-                    <p>Issued by codered | Year Attained: 2023</p>
-                    <a href="https://codered.eccouncil.org/certificate/b6156f88-805c-4f13-b358-b246ce14802d?logged=false" target="_blank">View Network Defense Essentials Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Diploma in Infocomm Security Management</h3>
-                    <p>Issued by Republic Polytechnic | Year Attained: 2023</p>
-                    <a href="https://www.credential.net/a55416c9-8cf3-4147-b3e1-08df2dc4268d?username=tohyongjie#gs.hxzhgv" target="_blank">View Diploma in Infocomm Security Management Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Singapore-Cambridge General Certificate of Education Ordinary Level</h3>
-                    <p>Issued by SEAB | Year attained: 2018</p>
-                    <a href="school.com" target="_blank">View Singapore-Cambridge GCE O-Level Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Edusave Merit Bursary (EMB)</h3>
-                    <p>Issued by Ministry of Education, Singapore (MOE) | Year attained: 2018</p>
-                    <a href="https://www.credential.net/085b0475-3e98-4e36-8079-9e404ec5822a?username=tohyongjie" target="_blank">View Edusave Merit Bursary Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>National Youth Achievement Award (Bronze)</h3>
-                    <p>Issued by National Youth Achievement Award Council | Year attained: 2018</p>
-                    <a href="https://www.credential.net/8ec009a2-65fc-4407-afe4-2d1539713487?username=tohyongjie" target="_blank">View National Youth Achievement Award Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Primary School Leaving Examination</h3>
-                    <p>Issued by SEAB | Year attained: 2014</p>
-                    <a href="school.com" target="_blank">View Primary School Leaving Examination Certificate</a>
-                </div>
-                <div class="certificate">
-                    <h3>Edusave Good Progress Award (GPA)</h3>
-                    <p>Issued by Ministry of Education, Singapore (MOE) | Year attained: 2012</p>
-                    <a href="https://www.credential.net/96104c1a-ee64-4492-9b8f-78c18f222fcd?username=tohyongjie" target="_blank">View Edusave Good Progress Award Certificate</a>
-                </div>
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificates-list">
+            <div class="certificate">
+                <h3>AI FOR INDUSTRY® - Literacy In AI</h3>
+                <p>Issued by AI Singapore | Year Attained: 2023</p>
+                <a href="https://certified.aisingapore.org/74c02184-c7b5-41c2-8a77-9299bf28a3ef" target="_blank">View Certificate</a>
             </div>
-        </section>
+            <div class="certificate">
+                <h3>Digital Forensics Essentials (DFE)</h3>
+                <p>Issued by codered | Year Attained: 2023</p>
+                <a href="https://codered.eccouncil.org/certificate/36c0cf49-8cae-41cd-b0f8-32f6f8b8f74c?logged=false" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate">
+                <h3>Ethical Hacking Essentials (EHE)</h3>
+                <p>Issued by codered | Year Attained: 2023</p>
+                <a href="https://codered.eccouncil.org/certificate/5146c0c2-3df8-4ed3-8310-b81e44da81ac?logged=false" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate">
+                <h3>Network Defense Essentials (NDE)</h3>
+                <p>Issued by codered | Year Attained: 2023</p>
+                <a href="https://codered.eccouncil.org/certificate/b6156f88-805c-4f13-b358-b246ce14802d?logged=false" target ="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-list">
-                <div class="education">
-                    <h3>Diploma in Infocomm Security Management</h3>
-                    <p>Republic Polytechnic | Graduated: 2023</p>
-                </div>
-                <div class="education">
-                    <h3>Secondary School</h3>
-                    <p>Chua Chu Kang Secondary | Graduated: 2019</p>
-                </div>
-                <div class="education">
-                    <h3>Primary School</h3>
-                    <p>Bukit Panjang Primary | Graduated: 2014</p>
-                </div>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education">
+                <h3>Diploma in Infocomm Security Management</h3>
+                <p>Republic Polytechnic | Graduated: 2023</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="experience">
-                    <h3>Military Policeman NSF</h3>
-                    <p><strong>Singapore Army</strong> | Jul 2023 - Present</p>
-                    <ul>
-                        <li>National Service</li>   
-                    </ul>
-                </div>
-                <div class="experience">
-                    <h3>Information Technology Support Engineer Intern</h3>
-                    <p><strong>A-ChieveMent Solution(S) Pte Ltd</strong> | Sep 2022 - Jan 2023</p>
-                    <ul>
-                        <li>Installing and configuring client computer systems.</li>
-                        <li>Responding to client IT support requests.</li>
-                    </ul>
-                </div>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience">
+                <h3>Military Policeman NSF</h3>
+                <p><strong>Singapore Army</strong> | Jul 2023 - Present</p>
+                <ul>
+                    <li>National Service</li>   
+                </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="linkedin">
-                <p>Connect with me on LinkedIn:</p>
-                <a href="https://www.linkedin.com/in/tohyj/" target="_blank" class="btn">Visit LinkedIn Profile</a>
-            </div>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Toh Yong Jie. All rights reserved.</p>
+        <p>&copy; 2023 Toh Yong Jie. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></
+    <script src="script.js"></script>
+</body>
+</html>
