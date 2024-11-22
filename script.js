@@ -6,4 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
         navToggle.setAttribute('aria-expanded', !expanded);
         navList.setAttribute('aria-hidden', expanded);
-        navList.classList.toggle
+        navList.classList.toggle('show');
+    });
+});
