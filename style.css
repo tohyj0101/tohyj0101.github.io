@@ -75,7 +75,8 @@ section {
 
 .skill, .certificate, .education, .experience {
     flex: 1 1 300px;
-    margin: 10px;
+    margin: 10 ```css
+px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
