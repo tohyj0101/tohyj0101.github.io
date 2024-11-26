@@ -7,5 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.setAttribute('aria-expanded', !expanded);
         navList.setAttribute('aria-hidden', expanded);
         navList.classList.toggle('show');
+        navList.style.transition = "max-height 0.3s ease-in-out"; // Add transition effect
     });
 });
