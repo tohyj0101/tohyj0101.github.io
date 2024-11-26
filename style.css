@@ -81,7 +81,7 @@ ul li a:hover {
 }
 
 ul li a:focus {
-    outline: 2px solid var(--secondary-color); /* Focus style for accessibility */
+    outline: 2px solid var (--secondary-color); /* Focus style for accessibility */
 }
 
 section {
