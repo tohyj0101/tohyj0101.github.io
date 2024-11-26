@@ -80,6 +80,10 @@ ul li a:hover {
     color: var(--secondary-color); /* Gold color on hover */
 }
 
+ul li a:focus {
+    outline: 2px solid var(--secondary-color); /* Focus style for accessibility */
+}
+
 section {
     padding: 60px 20px;
     margin: 20px 0;
