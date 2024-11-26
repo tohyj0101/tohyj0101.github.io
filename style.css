@@ -146,4 +146,30 @@ h3 {
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background : var(--hover-darken); /* Darker blue on hover */
+}
+
+/* Mobile responsiveness */
+#nav-list {
+    display: none; /* Initially hidden */
+}
+
+#nav-list.show {
+    display: flex; /* Show when toggled */
+    flex-direction: column; /* Stack vertically on mobile */
+}
+
+@media (min-width: 768px) {
+    #nav-list {
+        display: flex; /* Show in row on larger screens */
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    .nav-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+}
