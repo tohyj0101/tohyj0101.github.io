@@ -1,4 +1,9 @@
+// Update the copyright year dynamically
 document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
+
+    // Navigation toggle functionality
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.getElementById('nav-list');
 
