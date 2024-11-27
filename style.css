@@ -153,30 +153,30 @@ h3 {
 
 .skill:hover, .certificate:hover, .education:hover, .experience:hover {
     transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 12px 24px;
-    border-radius: 30px; /* More rounded */
-    text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.btn:hover {
-    background: var(--hover-darken);
-    transform: translateY(-2px); /* Slight lift effect */
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color); /* Change color on hover */
 }
 
 footer {
-    background: var(--primary-dark); /* Darker background */
-    color: var(--white);
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background: var(--primary-color);
+    color: var(--white);
     position: relative;
     bottom: 0;
     width: 100%;
@@ -188,49 +188,24 @@ footer {
     }
 
     ul {
-        display: none; /* Hide menu items by default */
+        display: none; /* Hide menu by default on mobile */
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
+        right: 0;
         background: var(--primary-color);
-        border-radius: 5px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
-    ul.active {
-        display: flex; /* Show menu items when active */
+    ul.show {
+        display: flex; /* Show menu when toggled */
     }
 
     ul li {
         margin: 10px 0; /* Adjust margin for mobile */
-    }
-
-    .about-container {
-        flex-direction: column; /* Stack profile image and text */
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em; /* Adjust heading size for small screens */
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1.2em;
-    }
-
-    .profile-img {
-        width: 120px; /* Smaller profile image */
-        height: 120px;
-    }
-
-    .btn {
-        padding: 10px 20px; /* Adjust button size */
     }
 }
