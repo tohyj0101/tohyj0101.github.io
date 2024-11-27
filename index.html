@@ -181,27 +181,6 @@
     <footer>
       <p>&copy; <span id="current-year"></span> Toh Yong Jie. All rights reserved. </p>
     </footer>
-    <script>
-      // Update the copyright year dynamically
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-      // Navigation toggle functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.nav-toggle');
-        const navList = document.getElementById('nav-list');
-        navToggle.addEventListener('click', function() {
-          const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-          navToggle.setAttribute('aria-expanded', !expanded);
-          navList.setAttribute('aria-hidden', expanded);
-          navList.classList.toggle('show');
-          // Smooth transition for the dropdown menu
-          if (expanded) {
-            navList.style.maxHeight = null; // Collapse the menu
-          } else {
-            navList.style.maxHeight = navList.scrollHeight + "px"; // Expand the menu
-          }
-        });
-      });
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
