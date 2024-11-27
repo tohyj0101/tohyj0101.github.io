@@ -10,6 +10,8 @@
     --background-color: #f4f4f4; /* Background color */
     --text-color: #333; /* Text color */
     --footer-background: #002147; /* Footer background color */
+    --border-radius: 8px; /* General border radius */
+    --transition-speed: 0.3s; /* Transition speed for hover effects */
 }
 
 /* Reset some default styles */
@@ -30,7 +32,7 @@ body {
 header {
     background: var(--primary-color);
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -59,8 +61,8 @@ nav {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: var(--border-radius);
+    transition: background var(--transition-speed);
 }
 
 #nav-list a:hover {
@@ -76,7 +78,7 @@ nav {
         border: none;
         padding: 10px;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: var(--border-radius);
     }
 
     #nav-list {
@@ -84,7 +86,7 @@ nav {
         flex-direction: column;
         max-height: 0; /* Start collapsed */
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height var(--transition-speed) ease;
     }
 
     #nav-list.show {
@@ -104,7 +106,7 @@ section {
     margin: 40px 0;
     padding: 20px;
     background: #fff;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,7 +124,7 @@ section {
     margin: 0 15px; /* Adjust spacing between icons */
     font-size: 36px; /* Increase the icon size */
     color: var(--primary-color);
-    transition: color 0.3s;
+    transition: color var(--transition-speed);
 }
 
 .social-icon:hover {
@@ -138,6 +140,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Utility Classes */
@@ -151,4 +154,54 @@ footer {
 
 .mb-20 {
     margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+.button:hover {
+    background: var(--primary-light);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 480px) {
+    .social-icon {
+        font-size: 30px; /* Adjust icon size for smaller screens */
+    }
+
+    header {
+        padding: 1rem 0; /* Reduce padding in header */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding in main content */
+    }
 }
