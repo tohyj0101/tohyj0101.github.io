@@ -1,207 +1,120 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* CSS Variables for easier maintenance */
-:root {
-    --primary-color: #4A90E2; /* Main color */
-    --primary-light: #A7C6ED; /* Light shade */
-    --primary-dark: #003366; /* Dark shade */
-    --secondary-color: #FF5722; /* Secondary color for hover effects */
-    --background-color: #f4f4f4; /* Background color */
-    --text-color: #333; /* Text color */
-    --footer-background: #002147; /* Footer background color */
-    --border-radius: 8px; /* General border radius */
-    --transition-speed: 0.3s; /* Transition speed for hover effects */
-}
-
-/* Reset some default styles */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
-/* Header styles */
+/* Header */
 header {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
 }
 
-/* Navigation styles */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation */
 nav {
-    margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-toggle {
-    display: none; /* Hide toggle by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 #nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  display: none;
 }
 
-#nav-list li {
-    margin: 0 15px;
+#nav-list.open {
+  display: block;
 }
 
-#nav-list a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: var(--border-radius);
-    transition: background var(--transition-speed);
+/* Home Section */
+.home-content {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-#nav-list a:hover {
-    background: var(--primary-light);
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block; /* Show toggle on mobile */
-        background: var(--primary-dark);
-        color: #fff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: var(--border-radius);
-    }
-
-    #nav-list {
-        display: none; /* Hide list by default */
-        flex-direction: column;
-        max-height: 0; /* Start collapsed */
-        overflow: hidden;
-        transition: max-height var(--transition-speed) ease;
-    }
-
-    #nav-list.show {
-        display: flex; /* Show list when toggled */
-    }
+/* About Section */
+.about-container {
+  text-align: center;
+  padding: 20px;
 }
 
-/* Main content styles */
-main {
-    padding: 20px;
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the main content */
-}
-
-/* Section styles */
-section {
-    margin: 40px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.profile-img {
+  border-radius: 50%;
+  max-width: 200px;
 }
 
 /* Contact Section */
-#contact {
-    text-align: center;
-}
-
 .social-media {
-    text-align: center; /* Center the icons */
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
 }
 
-.social-icon {
-    margin: 0 15px; /* Adjust spacing between icons */
-    font-size: 36px; /* Increase the icon size */
-    color: var(--primary-color);
-    transition: color var(--transition-speed);
+.social-media a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
 }
 
-.social-icon:hover {
-    color: var(--secondary-color); /* Change color on hover */
+.social-media a:hover {
+  color: #007bff;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #nav-list {
+    display: none;
     text-align: center;
-    padding: 1rem 0;
-    background: var(--footer-background);
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
+  }
 
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
+  .nav-toggle {
+    display: block;
+  }
 
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
-/* Button Styles */
-.button {
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background var(--transition-speed);
-}
-
-.button:hover {
-    background: var(--primary-light);
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-form input:focus, form textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-/* Media Queries for Better Responsiveness */
-@media (max-width: 480px) {
-    .social-icon {
-        font-size: 30px; /* Adjust icon size for smaller screens */
-    }
-
-    header {
-        padding: 1rem 0; /* Reduce padding in header */
-    }
-
-    main {
-        padding: 10px; /* Reduce padding in main content */
-    }
+  #nav-list.open {
+    display: block;
+  }
 }
