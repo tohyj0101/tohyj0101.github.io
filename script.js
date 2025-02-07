@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Mobile Menu Toggle
   navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
     navList.classList.toggle("open");
   });
 
