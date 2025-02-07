@@ -1,120 +1,27 @@
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-}
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
 
 /* Header */
-header {
-  background: #333;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+header { background: #333; color: white; padding: 10px 20px; text-align: center; }
+.logo { font-size: 24px; font-weight: bold; }
 
 /* Navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+nav { display: flex; justify-content: space-between; align-items: center; }
+.nav-toggle { background: none; border: none; color: white; font-size: 18px; cursor: pointer; }
+#nav-list { list-style: none; padding: 0; display: none; }
+#nav-list.open { display: block; }
 
-.nav-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-}
+/* Sections */
+section { padding: 20px; text-align: center; }
+.btn { background: #007bff; color: white; padding: 10px 20px; border-radius: 5px; }
 
-#nav-list {
-  list-style: none;
-  padding: 0;
-  display: none;
-}
-
-#nav-list.open {
-  display: block;
-}
-
-/* Home Section */
-.home-content {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.btn {
-  display: inline-block;
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* About Section */
-.about-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.profile-img {
-  border-radius: 50%;
-  max-width: 200px;
-}
-
-/* Contact Section */
-.social-media {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 10px;
-}
-
-.social-media a {
-  text-decoration: none;
-  font-size: 24px;
-  color: #333;
-  transition: color 0.3s;
-}
-
-.social-media a:hover {
-  color: #007bff;
-}
+/* Contact */
+.social-media { display: flex; justify-content: center; gap: 15px; }
+.social-media a { font-size: 24px; color: #333; transition: color 0.3s; }
+.social-media a:hover { color: #007bff; }
 
 /* Footer */
-footer {
-  text-align: center;
-  background: #333;
-  color: white;
-  padding: 10px;
-}
+footer { background: #333; color: white; text-align: center; padding: 10px; }
 
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  #nav-list {
-    display: none;
-    text-align: center;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  #nav-list.open {
-    display: block;
-  }
-}
+/* Responsive */
+@media (max-width: 768px) { #nav-list { display: none; } #nav-list.open { display: block; } }
