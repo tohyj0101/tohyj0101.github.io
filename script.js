@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+  const navToggle = document.querySelector(".nav-toggle");
+  const navList = document.getElementById("nav-list");
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-    });
+  // Mobile Menu Toggle
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+    navList.classList.toggle("open");
+  });
 
-    // Mobile Navigation Toggle
-    const navToggle = document.querySelector(".nav-toggle");
-    const navList = document.querySelector(".nav-list");
+  // Dark Mode Toggle
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
 
-    navToggle.addEventListener("click", function () {
-        navList.classList.toggle("active");
-    });
-
-    // Dynamic Year in Footer
-    document.getElementById("current-year").textContent = new Date().getFullYear();
+  // Dynamic Footer Year
+  document.getElementById("current-year").textContent = new Date().getFullYear();
 });
