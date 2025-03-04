@@ -12,18 +12,18 @@
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
     <!-- Stylesheets -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" as="style">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <nav role="navigation" aria-label="Main Navigation">
         <div class="logo" role="heading" aria-level="1">Toh Yong Jie</div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-          <span class="menu-text">Menu</span>
+          <span class="sr-only">Menu</span>
+          <span class="hamburger"></span>
         </button>
-        <ul id="nav-list" aria-hidden="true">
+        <ul class="nav-list" id="nav-list" aria-hidden="true">
           <li>
             <a href="#about">About</a>
           </li>
@@ -43,12 +43,13 @@
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <button id="dark-mode-toggle">🌙</button>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
           </li>
         </ul>
       </nav>
     </header>
     <main>
+      <!-- All your content sections here -->
       <section id="home">
         <div class="home-content">
           <h1>Welcome to My Portfolio</h1>
