@@ -1,136 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for Social Media Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional vCard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* CSS Variables */
+      :root {
+          --bg-color: #f5f5f5;
+          --sidebar-bg: #1a1a1a;
+          --text-color: #333333;
+          --text-light: #f5f5f5;
+          --primary-color: #0077b5;
+          --secondary-color: #00a0dc;
+          --accent-color: #0095ff;
+          --card-bg: #ffffff;
+          --border-radius: 8px;
+          --transition: all 0.3s ease;
+          --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Base Styles */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          line-height: 1.6;
+      }
+
+      a {
+          text-decoration: none;
+          color: var(--primary-color);
+          transition: var(--transition);
+      }
+
+      a:hover {
+          color: var(--secondary-color);
+      }
+
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          display: grid;
+          grid-template-columns: 300px 1fr;
+          gap: 20px;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+          background: var(--sidebar-bg);
+          color: var(--text-light);
+          border-radius: var(--border-radius);
+          padding: 30px;
+          box-shadow: var(--box-shadow);
+      }
+
+      .profile-img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 5px solid var(--primary-color);
+          margin: 0 auto 20px;
+          display: block;
+      }
+
+      .profile-name {
+          font-size: 1.8rem;
+          text-align: center;
+          margin-bottom: 5px;
+      }
+
+      .profile-title {
+          text-align: center;
+          color: var(--secondary-color);
+          margin-bottom: 20px;
+      }
+
+      .contact-info {
+          margin: 25px 0;
+      }
+
+      .contact-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+      }
+
+      .contact-icon {
+          width: 30px;
+          height: 30px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+      }
+
+      .social-links {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          margin-top: 25px;
+      }
+
+      .social-link {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: var(--primary-color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          transition: var(--transition);
+      }
+
+      .social-link:hover {
+          background: var(--secondary-color);
+          transform: translateY(-3px);
+      }
+
+      /* Main Content Styles */
+      .main-content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      }
+
+      .card {
+          background: var(--card-bg);
+          border-radius: var(--border-radius);
+          padding: 25px;
+          box-shadow: var(--box-shadow);
+      }
+
+      .section-title {
+          font-size: 1.5rem;
+          color: var(--primary-color);
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid var(--primary-color);
+      }
+
+      /* About Section */
+      .about-text {
+          line-height: 1.8;
+      }
+
+      /* Experience Section */
+      .timeline {
+          position: relative;
+          margin-left: 10px;
+      }
+
+      .timeline::before {
+          content: '';
+          position: absolute;
+          left: -20px;
+          top: 0;
+          height: 100%;
+          width: 2px;
+          background: var(--primary-color);
+      }
+
+      .timeline-item {
+          position: relative;
+          margin-bottom: 25px;
+      }
+
+      .timeline-item::before {
+          content: '';
+          position: absolute;
+          left: -25px;
+          top: 5px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: var(--secondary-color);
+      }
+
+      .timeline-date {
+          font-size: 0.9rem;
+          color: #777;
+          margin-bottom: 5px;
+      }
+
+      .timeline-title {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+      }
+
+      .timeline-company {
+          color: var(--primary-color);
+          margin-bottom: 10px;
+          font-weight: 500;
+      }
+
+      /* Skills Section */
+      .skills-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+      }
+
+      .skill {
+          background: var(--primary-color);
+          color: white;
+          padding: 8px 15px;
+          border-radius: 20px;
+          font-size: 0.9rem;
+      }
+
+      /* Education Section */
+      .education-item {
+          margin-bottom: 20px;
+      }
+
+      .education-degree {
+          font-weight: 600;
+          color: var(--primary-color);
+          margin-bottom: 5px;
+      }
+
+      .education-institution {
+          margin-bottom: 5px;
+      }
+
+      .education-date {
+          color: #777;
+          font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 900px) {
+          .container {
+              grid-template-columns: 1fr;
+          }
+
+          .sidebar {
+              text-align: center;
+          }
+
+          .contact-item {
+              justify-content: center;
+          }
+      }
+
+      /* Footer */
+      footer {
+          text-align: center;
+          padding: 20px;
+          margin-top: 40px;
+          color: #777;
+          font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Toh Yong Jie</h1>
-        <p>Full-Time National Serviceman (NSF)</p>
-      </div>
-    </header>
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>Hi! I’m Toh Yong Jie, a cybersecurity enthusiast and recent graduate of Republic Polytechnic, where I earned my Diploma in Infocomm Security Management. My studies equipped me with hands-on skills in safeguarding digital systems, ethical hacking, and network defense—areas I’m eager to apply as I transition into the workforce after completing my National Service.</p>
-      </div>
-    </section>
-    <section id="experience">
-      <div class="container">
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <h3>Military Policeman NSF</h3>
-            <p>Singapore Armed Forces | Jul 2023 - Jul 2025</p>
-            <p>
-            <ul>
-              <li>Security & Threat Mitigation: Conducted patrols, monitored surveillance, and enforced access control to protect sensitive areas.</li>
-              <li>Crisis Response: Trained in rapid response to incidents, including conflict resolution and emergency coordination.</li>
-              <li>Operational Discipline: Maintained meticulous records of incidents, inspections, and daily operations.</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Information Technology Support Engineer Intern</h3>
-            <p>A-ChieveMent Solution(S) Pte Ltd | Sep 2022 - Jan 2023</p>
-            <p>
-            <ul>
-              <li> Delivering first-level technical support to resolve hardware, software, and network issues for end-users.</li>
-              <li>Configuring and troubleshooting desktops, laptops, and peripherals (Windows/Linux environments).</li>
-              <li>Assisting in network and server maintenance, including security updates and performance monitoring.</li>
-              <li>Collaborating on IT projects such as system upgrades and migrations, ensuring alignment with cybersecurity best practices.</li>
-              <li>Documenting support activities, IT assets, and user guides to streamline workflows.</li>
-            </ul>
-          </li>
-          <!-- Add more experience items as needed -->
-        </ul>
-      </div>
-    </section>
-    <section id="education">
-      <div class="container">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <h3>Diploma in Infocomm Security Management</h3>
-            <p>Republic Polytechnic | 2020 - 2023</p>
-          </li>
-          <li>
-            <h3>Singapore-Cambridge General Certificate of Education Ordinary Level</h3>
-            <p>Chua Chu Kang Secondary School | 2015 - 2019</p>
-          </li>
-          <li>
-            <h3>Primary School Leaving Examination</h3>
-            <p>Bukit Panjang Primary School | 2009 - 2014</p>
-          </li>
-          <!-- Add more education items as needed -->
-        </ul>
-      </div>
-    </section>
-    <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul>
-          <li>Cybersecurity</li>
-          <!-- Add more skills as needed -->
-        </ul>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <h3>Implementing a Malware Analysis Laboratory</h3>
-            <p>Created a virtualized, isolated sandbox environment with tools for static/dynamic analysis, strict security protocols to prevent leaks, and documentation to study malware behavior, identify threats, and develop mitigation strategies.</p>
-          </li>
-          <!-- Add more projects as needed -->
-        </ul>
-      </div>
-    </section>
-    <section id="certificates">
-      <div class="container">
-        <h2>Certificates</h2>
-        <ul>
-          <li>
-            <h3>Diploma in Infocomm Security Management</h3>
-            <p>Republic Polytechnic | 2023</p>
-            <p>
-              <a href="https://www.credential.net/a55416c9-8cf3-4147-b3e1-08df2dc4268d?username=tohyongjie#gs.hxzhgv" target="_blank">View Certificate</a>
-            </p>
-          </li>
-          <li>
-            <h3>Edusave Merit Bursary (EMB)</h3>
-            <p>Ministry of Education, Singapore (MOE) | 2019</p>
-            <p>
-              <a href="https://www.credential.net/085b0475-3e98-4e36-8079-9e404ec5822a?username=tohyongjie" target="_blank">View Certificate</a>
-            </p>
-          </li>
-          <!-- Add more certificates as needed -->
-        </ul>
-      </div>
-    </section>
-    
-    <footer>
-      <div class="container">
-        <div class="social-media">
-          <a href="https://www.linkedin.com/in/tohyj/" target="_blank">
-            <i class="fab fa-linkedin"></i>
+    <div class="container">
+      <!-- Sidebar with Profile Information -->
+      <aside class="sidebar">
+        <img
+          src="https://www.linkedin.com/"
+          alt="Profile Photo"
+          class="profile-img"
+        />
+        <h1 class="profile-name">Toh Yong Jie</h1>
+        <p class="profile-title">Undergraduate</p>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <span>tohyj0101@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <span>+65</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <span>Singapore</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/tohyj0101" target="_blank">
+          <a href="#" class="social-link">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.instagram.com/tohyj0101/" target="_blank">
-            <i class="fab fa-instagram"></i>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fas fa-globe"></i>
           </a>
         </div>
-        <p>&copy; <span id="current-year"></span> Toh Yong Jie. All rights reserved. </p>
-      </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- About Section -->
+        <section class="card">
+          <h2 class="section-title">About Me</h2>
+          <p class="about-text">
+            A motivated and detail-oriented cybersecurity student pursuing a
+            Bachelor's in Computer Science at the University of Wollongong.
+            Equipped with hands-on experience from internships and a proven
+            ability to apply critical thinking and problem-solving strategies to
+            complex technical challenges.
+          </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="card">
+          <h2 class="section-title">Work Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <p class="timeline-date">Present</p>
+              <h3 class="timeline-title">Undergraduate</h3>
+              <p class="timeline-company">SIM-UOW</p>
+              <p>Bachelor of Computer Science (Cyber Security)</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-date">Sep 2022 - Jan 2023</p>
+              <h3 class="timeline-title">
+                Information Technology Support Engineer
+              </h3>
+              <p class="timeline-company">A-ChieveMent Solution(S) Pte Ltd</p>
+              <p>Internship</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="card">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <div class="skills-container">
+            <span class="skill">Cybersecurity</span>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <div class="education-item">
+            <h3 class="education-degree">
+              Bachelor of Computer Science (Cyber Security)
+            </h3>
+            <p class="education-institution">University of Wollongong</p>
+            <p class="education-date">2025 - 2027</p>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">
+              Diploma in Infocomm Security Management
+            </h3>
+            <p class="education-institution">Republic Polytechnic</p>
+            <p class="education-date">2020 - 2023</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>
+        &copy; <span id="current-year"></span> Toh Yong Jie. All rights
+        reserved.
+      </p>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script>
+      // Get current year for the copyright
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
