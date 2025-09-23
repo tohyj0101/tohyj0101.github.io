@@ -95,6 +95,7 @@
 
       section {
         padding: 60px 0;
+        scroll-margin-top: 70px; /* Added to fix navigation offset */
       }
 
       .section-title {
@@ -394,4 +395,176 @@
       </div>
     </section>
     <!-- Education Section -->
-   
+    <section id="education" style="background-color: #f0f5f9;">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2025-2027</div>
+            <div class="card">
+              <h3>Bachelor of Computer Science (Cyber Security)</h3>
+              <p>
+                <strong>University of Wollongong</strong> - Singapore
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2020-2023</div>
+            <div class="card">
+              <h3>Diploma in Infocomm Security Management</h3>
+              <p>
+                <strong>Republic Polytechnic</strong> - Singapore
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2015-2019</div>
+            <div class="card">
+              <h3>GCE O-level</h3>
+              <p>
+                <strong>Chua Chu Kang Secondary School</strong> - Singapore
+              </p>
+              <ul style="margin-top: 10px; padding-left: 20px;">
+                <li>Appointed Class Committee (2019)</li>
+                <li>National Youth Achievement Award - Bronze Medal (2018)</li>
+                <li>Edusave Merit Bursary / Certificate of Academic Achievement (2019)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2022 - Jan 2023</div>
+            <div class="card">
+              <h3>Information Technology Support Engineer (Intern)</h3>
+              <p>
+                <strong>A-ChieveMent Solution (S) Pte Ltd</strong> - Singapore
+              </p>
+              <p>A Corporate IT Solutions Provider based in Singapore, offering a range of IT services including hardware support, managed IT services, and cloud computing solutions.</p>
+              <ul style="margin-top: 15px; padding-left: 20px;">
+                <li>Delivered Tier 1/2 technical support for 50+ employees, achieving a 95% first-contact resolution rate for hardware and software issues, minimizing downtime.</li>
+                <li>Managed the complete user lifecycle (onboarding/offboarding, permissions) via Active Directory and Microsoft 365 Admin Center, enforcing access control policies.</li>
+                <li>Diagnosed and resolved network connectivity issues, reducing recurring tickets by 30% by identifying root causes and implementing permanent solutions.</li>
+                <li>Strengthened endpoint security by deploying and configuring security patches across 60+ workstations, ensuring compliance with vulnerability management protocols.</li>
+                <li>Developed and documented technical procedures for a shared knowledge base, standardizing support protocols and improving team efficiency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2023 - Jul 2025</div>
+            <div class="card">
+              <h3>Full-time National Serviceman</h3>
+              <p>
+                <strong>Singapore Armed Forces</strong> - Singapore
+              </p>
+              <ul style="margin-top: 15px; padding-left: 20px;">
+                <li>Safeguarded a critical military installation (MINDEF Headquarters) through vigilant monitoring and strict adherence to security protocols, ensuring 100% perimeter integrity.</li>
+                <li>Executed precise access control procedures, verifying personnel credentials to prevent unauthorized entry.</li>
+                <li>Maintained high situational awareness in a high-stakes environment, enabling swift identification and response to potential security breaches.</li>
+                <li>Collaborated effectively within a team to perform coordinated guard duties, emphasizing clear communication and disciplined execution of SOPs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" style="background-color: #f0f5f9;">
+      <div class="container">
+        <h2 class="section-title">Skills & Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Programming & Development</span>
+              <span class="skill-tag">Systems & Network Security</span>
+              <span class="skill-tag">IT Infrastructure & Management</span>
+              <span class="skill-tag">Security & Forensics</span>
+              <span class="skill-tag">Active Directory</span>
+              <span class="skill-tag">Microsoft 365 Admin Center</span>
+              <span class="skill-tag">Vulnerability Management</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Professional Skills</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Critical Thinking & Problem-Solving</span>
+              <span class="skill-tag">Troubleshooting Methodologies</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Attention to Detail</span>
+              <span class="skill-tag">Adherence to Protocols</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> Toh Yong Jie. All rights reserved. </p>
+        <p>Email: yjtoh010@mymail.sim.edu.sg</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tohyj/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank">
+            <i class="fas fa-certificate"></i>
+          </a>
+          <a href="mailto:tohyj0101@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+      });
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Close mobile menu if open
+          document.querySelector('.nav-links').classList.remove('active');
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      // Get current year for the copyright
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      // Back to top button visibility
+      window.addEventListener('scroll', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+      // Navbar background on scroll
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.nav-bar');
+        if (window.pageYOffset > 50) {
+          navbar.style.background = 'rgba(44, 62, 80, 0.98)';
+          navbar.style.padding = '10px 0';
+        } else {
+          navbar.style.background = 'rgba(44, 62, 80, 0.95)';
+          navbar.style.padding = '15px 0';
+        }
+      });
+    </script>
+  </body>
+</html>
