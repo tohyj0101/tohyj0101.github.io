@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
       :root {
-        --primary: #2c3e50;
-        --secondary: #3498db;
+        --primary: #1a2b3c;
+        --secondary: #0d8b8b;
         --accent: #e74c3c;
         --light: #ecf0f1;
-        --dark: #2c3e50;
+        --dark: #0f1924;
         --gray: #95a5a6;
+        --cyber-blue: #00a8cc;
       }
 
       * {
@@ -37,7 +38,7 @@
       }
 
       header {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        background: linear-gradient(135deg, var(--primary), var(--dark));
         color: white;
         padding: 80px 0 60px;
         text-align: center;
@@ -52,9 +53,22 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%2300a8cc" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
         background-size: cover;
         background-position: center;
+      }
+
+      .cyber-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(13, 139, 139, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(13, 139, 139, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+        z-index: 0;
       }
 
       header .container {
@@ -91,11 +105,16 @@
         padding: 8px 15px;
         border-radius: 30px;
         backdrop-filter: blur(5px);
+        transition: transform 0.3s ease;
+      }
+
+      .contact-item:hover {
+        transform: translateY(-3px);
       }
 
       section {
         padding: 60px 0;
-        scroll-margin-top: 70px; /* Added to fix navigation offset */
+        scroll-margin-top: 70px;
       }
 
       .section-title {
@@ -165,52 +184,16 @@
         z-index: 1;
       }
 
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-      }
-
-      .skill-category {
-        margin-bottom: 20px;
-      }
-
-      .skill-category h3 {
-        color: var(--primary);
-        margin-bottom: 10px;
-        border-bottom: 1px solid var(--gray);
-        padding-bottom: 5px;
-      }
-
-      .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .skill-tag {
-        background: var(--light);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-      }
-
-      .skill-tag:hover {
-        background: var(--secondary);
-        color: white;
-        transform: scale(1.05);
-      }
-
       .nav-bar {
         position: fixed;
         top: 0;
         width: 100%;
-        background: rgba(44, 62, 80, 0.95);
+        background: rgba(26, 43, 60, 0.95);
         backdrop-filter: blur(10px);
         z-index: 1000;
         padding: 15px 0;
         transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(13, 139, 139, 0.3);
       }
 
       .nav-container {
@@ -225,6 +208,11 @@
         font-weight: bold;
       }
 
+      .logo i {
+        color: var(--cyber-blue);
+        margin-right: 5px;
+      }
+
       .nav-links {
         display: flex;
         gap: 25px;
@@ -234,10 +222,26 @@
         color: white;
         text-decoration: none;
         transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-links a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--cyber-blue);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover:after {
+        width: 100%;
       }
 
       .nav-links a:hover {
-        color: var(--secondary);
+        color: var(--cyber-blue);
       }
 
       .mobile-menu-btn {
@@ -266,11 +270,12 @@
       .footer-links a {
         color: white;
         font-size: 1.5rem;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease, transform 0.3s ease;
       }
 
       .footer-links a:hover {
-        color: var(--secondary);
+        color: var(--cyber-blue);
+        transform: translateY(-3px);
       }
 
       @media (max-width: 768px) {
@@ -345,13 +350,29 @@
         transform: translateY(-5px);
         background: var(--primary);
       }
+      
+      /* Achievement badges */
+      .achievement-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(13, 139, 139, 0.1);
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 0.9rem;
+      }
+      
+      .achievement-badge i {
+        color: var(--secondary);
+      }
     </style>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="nav-bar">
       <div class="container nav-container">
-        <div class="logo">TYJ</div>
+        <div class="logo"><i class="fas fa-shield-alt"></i>TYJ</div>
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -359,12 +380,13 @@
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
         </div>
       </div>
     </nav>
+
     <!-- Header Section -->
     <header>
+      <div class="cyber-grid"></div>
       <div class="container">
         <h1>Toh Yong Jie</h1>
         <p>Cybersecurity-focused Computer Science student with hands-on experience in IT support and security protocols. Seeking to apply technical and analytical skills to protect organizational assets.</p>
@@ -381,9 +403,14 @@
             <i class="fab fa-linkedin"></i>
             <span>linkedin.com/in/tohyj</span>
           </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>github.com/tohyj0101</span>
+          </div>
         </div>
       </div>
     </header>
+
     <!-- About Section -->
     <section id="about">
       <div class="container">
@@ -391,9 +418,16 @@
         <div class="card">
           <p>I am a Computer Science student specializing in Cybersecurity at the University of Wollongong, Singapore. With a strong foundation in IT support and security protocols gained through my diploma and work experience, I am passionate about protecting digital assets and implementing robust security measures.</p>
           <p>My experience includes troubleshooting complex technical issues, managing secure access controls, and implementing defensive security measures. I am seeking an entry-level cybersecurity role where I can apply my technical and analytical skills to help organizations strengthen their security posture.</p>
+          
+          <div style="margin-top: 20px;">
+            <h3 style="color: var(--primary); margin-bottom: 10px;">Key Interests:</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <span style="background: var(--light); padding: 5px 12px; border-radius: 20px; font-size: 0.9rem;">Cybersecurity</span>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- Education Section -->
     <section id="education" style="background-color: #f0f5f9;">
       <div class="container">
@@ -406,6 +440,9 @@
               <p>
                 <strong>University of Wollongong</strong> - Singapore
               </p>
+              <div style="margin-top: 10px;">
+                <span class="achievement-badge"><i class="fas fa-graduation-cap"></i>Expected Graduation: 2027</span>
+              </div>
             </div>
           </div>
           <div class="timeline-item">
@@ -415,6 +452,10 @@
               <p>
                 <strong>Republic Polytechnic</strong> - Singapore
               </p>
+              <ul style="margin-top: 10px; padding-left: 20px;">
+                <li>Specialized in network security and digital forensics</li>
+                <li>Completed capstone project on intrusion detection systems</li>
+              </ul>
             </div>
           </div>
           <div class="timeline-item">
@@ -434,6 +475,7 @@
         </div>
       </div>
     </section>
+
     <!-- Experience Section -->
     <section id="experience">
       <div class="container">
@@ -474,37 +516,7 @@
         </div>
       </div>
     </section>
-    <!-- Skills Section -->
-    <section id="skills" style="background-color: #f0f5f9;">
-      <div class="container">
-        <h2 class="section-title">Skills & Competencies</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Technical Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Programming & Development</span>
-              <span class="skill-tag">Systems & Network Security</span>
-              <span class="skill-tag">IT Infrastructure & Management</span>
-              <span class="skill-tag">Security & Forensics</span>
-              <span class="skill-tag">Active Directory</span>
-              <span class="skill-tag">Microsoft 365 Admin Center</span>
-              <span class="skill-tag">Vulnerability Management</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Professional Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Critical Thinking & Problem-Solving</span>
-              <span class="skill-tag">Troubleshooting Methodologies</span>
-              <span class="skill-tag">Communication</span>
-              <span class="skill-tag">Team Collaboration</span>
-              <span class="skill-tag">Attention to Detail</span>
-              <span class="skill-tag">Adherence to Protocols</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -516,16 +528,21 @@
           <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank">
             <i class="fas fa-certificate"></i>
           </a>
+          <a href="https://github.com/tohyj0101" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
           <a href="mailto:tohyj0101@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>
     </footer>
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top">
       <i class="fas fa-arrow-up"></i>
     </a>
+
     <script>
       // Mobile menu toggle
       document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
@@ -566,10 +583,10 @@
       window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.nav-bar');
         if (window.pageYOffset > 50) {
-          navbar.style.background = 'rgba(44, 62, 80, 0.98)';
+          navbar.style.background = 'rgba(26, 43, 60, 0.98)';
           navbar.style.padding = '10px 0';
         } else {
-          navbar.style.background = 'rgba(44, 62, 80, 0.95)';
+          navbar.style.background = 'rgba(26, 43, 60, 0.95)';
           navbar.style.padding = '15px 0';
         }
       });
