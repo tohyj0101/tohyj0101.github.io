@@ -7,6 +7,7 @@
     <title>Toh Yong Jie - Cybersecurity Portfolio</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <style>
       :root {
         --primary: #1a2b3c;
@@ -16,6 +17,16 @@
         --dark: #0f1924;
         --gray: #95a5a6;
         --cyber-blue: #00a8cc;
+      }
+
+      [data-theme="dark"] {
+        --primary: #0f1924;
+        --secondary: #00a8cc;
+        --accent: #e74c3c;
+        --light: #1a2b3c;
+        --dark: #ecf0f1;
+        --gray: #95a5a6;
+        --cyber-blue: #0d8b8b;
       }
 
       * {
@@ -30,6 +41,7 @@
         color: #333;
         background-color: #f9f9f9;
         scroll-behavior: smooth;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       .container {
@@ -117,6 +129,7 @@
       section {
         padding: 60px 0;
         scroll-margin-top: 70px;
+        transition: background-color 0.3s ease;
       }
 
       .section-title {
@@ -359,6 +372,30 @@
         background: var(--primary);
       }
       
+      /* Theme Toggle Button */
+      .theme-toggle {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: var(--secondary);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        z-index: 99;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-3px);
+        background: var(--primary);
+      }
+
       /* Achievement badges */
       .achievement-badge {
         display: inline-flex;
@@ -550,16 +587,16 @@
       <div class="container">
         <p>&copy; <span id="current-year"></span> Toh Yong Jie. All rights reserved. </p>
         <div class="footer-links">
-          <a href="https://www.linkedin.com/in/tohyj/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/tohyj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin" aria-hidden="true"></i>
           </a>
-          <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" aria-label="Certifications">
+          <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" rel="noopener noreferrer" aria-label="Certifications">
             <i class="fas fa-certificate" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/tohyj0101" target="_blank" aria-label="GitHub">
+          <a href="https://github.com/tohyj0101" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="fab fa-github" aria-hidden="true"></i>
           </a>
-          <a href="mailto:tohyj0101@gmail.com" aria-label="Email">
+          <a href="mailto:tohyj0101@gmail.com" rel="noopener noreferrer" aria-label="Email">
             <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
@@ -570,6 +607,11 @@
     <a href="#" class="back-to-top" aria-label="Back to top">
       <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+    </div>
 
     <script>
       // Mobile menu toggle
@@ -631,6 +673,27 @@
           navbar.style.background = 'rgba(26, 43, 60, 0.95)';
           navbar.style.padding = '15px 0';
         }
+      });
+
+      // Theme toggle functionality
+      const themeToggle = document.querySelector('.theme-toggle');
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun" aria-hidden="true"></i>';
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        themeToggle.innerHTML = newTheme === 'dark' 
+          ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+          : '<i class="fas fa-moon" aria-hidden="true"></i>';
       });
     </script>
   </body>
