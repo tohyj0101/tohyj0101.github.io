@@ -476,6 +476,7 @@
         font-weight: 600;
         transition: var(--transition);
         border: 2px solid transparent;
+        margin: 5px;
       }
       
       .btn-primary:hover {
@@ -483,6 +484,13 @@
         color: var(--secondary);
         border-color: var(--secondary);
         transform: translateY(-3px);
+      }
+      
+      .btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
       }
 
       /* Footer */
@@ -810,21 +818,30 @@
       </div>
     </section>
 
-    <section id="certifications" style="text-align: center;">
+    <section id="certifications">
       <div class="container">
         <h2 class="section-title">Certifications</h2>
         <div class="card" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 40px;">
            <i class="fas fa-certificate" style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
            <p style="margin-bottom: 25px;">
-             View my full list of certifications, skills, and validated achievements on my official MySkillsFuture profile.
+             View my full list of certifications, skills, and validated achievements on my official profiles.
            </p>
-           <a 
-             href="https://www.myskillsfuture.gov.sg/csp/public/profile/5s06b041tx880b" 
-             target="_blank" 
-             class="btn-primary"
-           >
-             View MySkillsFuture Profile <i class="fas fa-external-link-alt" style="font-size: 0.9em;"></i>
-           </a>
+           <div class="btn-container">
+             <a 
+               href="https://www.myskillsfuture.gov.sg/csp/public/profile/5s06b041tx880b" 
+               target="_blank" 
+               class="btn-primary"
+             >
+               MySkillsFuture Profile <i class="fas fa-external-link-alt" style="font-size: 0.9em;"></i>
+             </a>
+             <a 
+               href="https://www.credential.net/profile/tohyongjie/wallet" 
+               target="_blank" 
+               class="btn-primary"
+             >
+               Credential.net Wallet <i class="fas fa-external-link-alt" style="font-size: 0.9em;"></i>
+             </a>
+           </div>
         </div>
       </div>
     </section>
