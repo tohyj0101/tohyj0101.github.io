@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Toh Yong Jie | Cyber Security</title>
     <meta name="description" content="Portfolio of Toh Yong Jie - Computer Science Student, Cyber Security Major, IT Support Engineer based in Singapore.">
     
@@ -28,7 +28,12 @@
         }
     </script>
     <style>
-        body { background-color: #09090B; color: #F8FAFC; }
+        html, body { 
+            background-color: #09090B; 
+            color: #F8FAFC; 
+            overflow-x: hidden; /* Prevents horizontal scrolling on mobile */
+            max-width: 100vw;
+        }
         .glass { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .glass-hover:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-4px); }
         .gradient-text { background: linear-gradient(to right, #60A5FA, #A78BFA, #F0ABFC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -112,33 +117,34 @@
                         Available for Internship & Graduate Opportunities
                     </div>
 
-                    <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white leading-[0.9]">
+                    <!-- Adjusted text-4xl for mobile to prevent overflow -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white leading-[0.9]">
                         TOH <span class="block gradient-text">YONG JIE</span>
                     </h1>
 
-                    <div class="mt-6 flex items-center gap-2 text-xl sm:text-2xl font-medium text-slate-200 h-8">
-                        <span class="text-slate-500">&gt;</span>
-                        <span id="typing-text"></span>
-                        <span class="w-[2px] h-6 bg-brand-blue animate-pulse"></span>
+                    <div class="mt-6 flex items-center gap-2 text-lg sm:text-2xl font-medium text-slate-200 min-h-[2rem]">
+                        <span class="text-slate-500 shrink-0">&gt;</span>
+                        <span id="typing-text" class="break-words"></span>
+                        <span class="w-[2px] h-6 bg-brand-blue animate-pulse shrink-0"></span>
                     </div>
 
-                    <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-2xl">
+                    <p class="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
                         I'm a Computer Science student majoring in Cyber Security with experience in IT support, networking, system administration, and security operations.
                     </p>
 
                     <div class="mt-8 flex flex-wrap gap-4">
-                        <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet text-white font-medium shadow-lg shadow-brand-violet/30 hover:shadow-brand-violet/60 transition-all hover:scale-105">
+                        <a href="#" class="inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet text-white text-sm sm:text-base font-medium shadow-lg shadow-brand-violet/30 hover:shadow-brand-violet/60 transition-all hover:scale-105">
                             <i data-lucide="download" class="w-4 h-4"></i> Download Resume
                         </a>
-                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all">
+                        <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3 rounded-full bg-white/5 border border-white/10 text-white text-sm sm:text-base hover:bg-white/10 transition-all">
                             <i data-lucide="mail" class="w-4 h-4"></i> Contact Me
                         </a>
                     </div>
                 </div>
 
                 <!-- Profile Card -->
-                <div class="lg:col-span-5 relative fade-in-up">
-                    <div class="relative mx-auto max-w-sm">
+                <div class="lg:col-span-5 relative fade-in-up w-full flex justify-center">
+                    <div class="relative w-full max-w-xs sm:max-w-sm">
                         <div class="absolute -inset-4 bg-gradient-to-br from-brand-blue/30 to-brand-violet/30 rounded-4xl blur-2xl"></div>
                         <div class="relative rounded-4xl overflow-hidden glass shadow-2xl">
                             <div class="aspect-square bg-dark-700 flex items-center justify-center">
@@ -150,8 +156,8 @@
                                         <div class="text-white font-semibold">Toh Yong Jie</div>
                                         <div class="text-slate-400 text-sm">CS Student · Cyber Sec</div>
                                     </div>
-                                    <div class="flex items-center gap-1 text-xs text-slate-300">
-                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-blue"></i> Singapore
+                                    <div class="flex items-center gap-1 text-xs text-slate-300 shrink-0">
+                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-blue"></i> SG
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap gap-2">
@@ -186,7 +192,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">Available</div>
                         <div class="text-sm text-slate-400 mt-1">Internship / Graduate</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center shrink-0">
                         <i data-lucide="activity" class="w-5 h-5 text-brand-green"></i>
                     </div>
                 </div>
@@ -203,7 +209,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">B.CompSci</div>
                         <div class="text-sm text-slate-400 mt-1">Cyber Security Major</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
                         <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-blue"></i>
                     </div>
                 </div>
@@ -220,7 +226,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">Singapore</div>
                         <div class="text-sm text-slate-400 mt-1">SG · UTC+8</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-violet/20 border border-brand-violet/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-brand-violet/20 border border-brand-violet/30 flex items-center justify-center shrink-0">
                         <i data-lucide="map-pin" class="w-5 h-5 text-brand-violet"></i>
                     </div>
                 </div>
@@ -237,7 +243,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">IT Support Intern</div>
                         <div class="text-sm text-slate-400 mt-1">A-ChieveMent Solution</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center shrink-0">
                         <i data-lucide="briefcase" class="w-5 h-5 text-amber-400"></i>
                     </div>
                 </div>
@@ -254,7 +260,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">SAF Military Police</div>
                         <div class="text-sm text-slate-400 mt-1">Security Operations</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-rose/20 border border-brand-rose/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-brand-rose/20 border border-brand-rose/30 flex items-center justify-center shrink-0">
                         <i data-lucide="shield" class="w-5 h-5 text-brand-rose"></i>
                     </div>
                 </div>
@@ -271,7 +277,7 @@
                         <div class="mt-2 text-xl font-semibold text-white">Cyber Defence</div>
                         <div class="text-sm text-slate-400 mt-1">SecOps · IR · DevSecOps</div>
                     </div>
-                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center shrink-0">
                         <i data-lucide="lock" class="w-5 h-5 text-cyan-400"></i>
                     </div>
                 </div>
@@ -298,10 +304,10 @@
                 <p>My journey spans <span class="text-white">IT support</span>, <span class="text-white">system administration</span>, <span class="text-white">military security operations</span>, and modern <span class="text-white">full-stack development</span>.</p>
                 
                 <div class="grid grid-cols-2 gap-3 pt-4">
-                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="shield" class="w-4 h-4 text-brand-blue"></i><span class="text-sm text-slate-200">Cybersecurity</span></div>
-                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="code" class="w-4 h-4 text-brand-blue"></i><span class="text-sm text-slate-200">Software Eng</span></div>
-                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="brain" class="w-4 h-4 text-brand-blue"></i><span class="text-sm text-slate-200">Continuous Learning</span></div>
-                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="target" class="w-4 h-4 text-brand-blue"></i><span class="text-sm text-slate-200">Problem Solving</span></div>
+                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="shield" class="w-4 h-4 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Cybersecurity</span></div>
+                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="code" class="w-4 h-4 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Software Eng</span></div>
+                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="brain" class="w-4 h-4 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Continuous Learning</span></div>
+                    <div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5 border border-white/10"><i data-lucide="target" class="w-4 h-4 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Problem Solving</span></div>
                 </div>
             </div>
 
@@ -354,15 +360,15 @@
         </div>
 
         <div class="space-y-8">
-            <div class="glass rounded-3xl p-8 fade-in-up relative overflow-hidden">
+            <div class="glass rounded-3xl p-6 sm:p-8 fade-in-up relative overflow-hidden">
                 <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
                 <div class="relative flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <div class="text-sm text-slate-400 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i> Internship</div>
-                        <h3 class="text-2xl font-semibold text-white mt-1">IT Support Engineer (Intern)</h3>
-                        <div class="text-brand-blue mt-1">A-ChieveMent Solution (S) Pte Ltd</div>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white mt-1">IT Support Engineer (Intern)</h3>
+                        <div class="text-brand-blue mt-1 text-sm sm:text-base">A-ChieveMent Solution (S) Pte Ltd</div>
                     </div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300 shrink-0">
                         <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i> Sep 2022 – Jan 2023
                     </div>
                 </div>
@@ -374,15 +380,15 @@
                 </ul>
             </div>
 
-            <div class="glass rounded-3xl p-8 fade-in-up relative overflow-hidden">
+            <div class="glass rounded-3xl p-6 sm:p-8 fade-in-up relative overflow-hidden">
                 <div class="absolute -top-20 -left-20 w-64 h-64 bg-brand-rose/10 rounded-full blur-3xl"></div>
                 <div class="relative flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <div class="text-sm text-slate-400 flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> National Service</div>
-                        <h3 class="text-2xl font-semibold text-white mt-1">Military Police</h3>
-                        <div class="text-brand-rose mt-1">Singapore Armed Forces</div>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white mt-1">Military Police</h3>
+                        <div class="text-brand-rose mt-1 text-sm sm:text-base">Singapore Armed Forces</div>
                     </div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300 shrink-0">
                         <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i> Full-time NS
                     </div>
                 </div>
@@ -410,7 +416,7 @@
             <!-- Programming -->
             <div class="glass rounded-2xl p-6 fade-in-up">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue to-cyan-400 flex items-center justify-center shadow-lg"><i data-lucide="code" class="w-5 h-5 text-white"></i></div>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue to-cyan-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="code" class="w-5 h-5 text-white"></i></div>
                     <h3 class="text-white font-semibold text-lg">Programming</h3>
                 </div>
                 <div class="space-y-4">
@@ -422,7 +428,7 @@
             <!-- Cyber Security -->
             <div class="glass rounded-2xl p-6 fade-in-up">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-violet to-fuchsia-400 flex items-center justify-center shadow-lg"><i data-lucide="shield" class="w-5 h-5 text-white"></i></div>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-violet to-fuchsia-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="shield" class="w-5 h-5 text-white"></i></div>
                     <h3 class="text-white font-semibold text-lg">Cyber Security</h3>
                 </div>
                 <div class="space-y-4">
@@ -434,7 +440,7 @@
             <!-- Networking -->
             <div class="glass rounded-2xl p-6 fade-in-up">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green to-teal-400 flex items-center justify-center shadow-lg"><i data-lucide="network" class="w-5 h-5 text-white"></i></div>
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green to-teal-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="network" class="w-5 h-5 text-white"></i></div>
                     <h3 class="text-white font-semibold text-lg">Networking & Systems</h3>
                 </div>
                 <div class="space-y-4">
@@ -457,34 +463,69 @@
         </div>
 
         <div class="max-w-2xl mx-auto">
-            <div class="glass rounded-3xl p-8 flex flex-col fade-in-up">
+            <div class="glass rounded-3xl p-6 sm:p-8 flex flex-col fade-in-up">
                 <div class="text-white text-2xl font-semibold">Reach out directly</div>
-                <p class="text-slate-400 mt-2">Whether it's a role, a project, or just a chat about cybersecurity — I'd love to hear from you.</p>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">Whether it's a role, a project, or just a chat about cybersecurity — I'd love to hear from you.</p>
                 <div class="mt-8 space-y-3 flex-1">
+                    
+                    <!-- Email -->
                     <a href="mailto:tohyj0101@gmail.com" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5 text-brand-blue"></i></div>
-                        <div class="flex-1"><div class="text-xs text-slate-500 uppercase tracking-widest">Email</div><div class="text-white">tohyj0101@gmail.com</div></div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-blue"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Email</div>
+                            <div class="text-white text-sm sm:text-base truncate">tohyj0101@gmail.com</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
                     </a>
+
+                    <!-- GitHub (Inline SVG for guaranteed rendering) -->
                     <a href="https://github.com/tohyj0101" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center"><i data-lucide="circle-user-round" class="w-5 h-5 text-brand-blue"></i></div>
-                        <div class="flex-1"><div class="text-xs text-slate-500 uppercase tracking-widest">GitHub</div><div class="text-white">tohyj0101</div></div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">GitHub</div>
+                            <div class="text-white text-sm sm:text-base truncate">tohyj0101</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
                     </a>
+
+                    <!-- LinkedIn (Inline SVG for guaranteed rendering) -->
                     <a href="https://linkedin.com/in/tohyj" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center"><i data-lucide="circle-user-round" class="w-5 h-5 text-brand-blue"></i></div>
-                        <div class="flex-1"><div class="text-xs text-slate-500 uppercase tracking-widest">LinkedIn</div><div class="text-white">tohyj</div></div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">LinkedIn</div>
+                            <div class="text-white text-sm sm:text-base truncate">tohyj</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
                     </a>
+
+                    <!-- Credential.net -->
                     <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center"><i data-lucide="award" class="w-5 h-5 text-brand-blue"></i></div>
-                        <div class="flex-1"><div class="text-xs text-slate-500 uppercase tracking-widest">Credential.net</div><div class="text-white">View Wallet</div></div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
+                            <i data-lucide="award" class="w-5 h-5 text-brand-blue"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Credential.net</div>
+                            <div class="text-white text-sm sm:text-base truncate">View Wallet</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
                     </a>
+
+                    <!-- MySkillsFuture -->
                     <a href="https://www.myskillsfuture.gov.sg" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center"><i data-lucide="briefcase" class="w-5 h-5 text-brand-blue"></i></div>
-                        <div class="flex-1"><div class="text-xs text-slate-500 uppercase tracking-widest">myskillsfuture.gov.sg</div><div class="text-white">View Careers & Skills Passport</div></div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-brand-blue"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest truncate">myskillsfuture.gov.sg</div>
+                            <div class="text-white text-sm sm:text-base break-words">View Careers & Skills Passport</div>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
                     </a>
                 </div>
             </div>
