@@ -1,0 +1,3 @@
+Since the file changes only include `.gitignore` (added) and `index.html` (modified), which are both source/config files without any build artifacts, dependencies, or temporary files, the optimized .gitignore should remain empty.
+
+(empty — output nothing)
