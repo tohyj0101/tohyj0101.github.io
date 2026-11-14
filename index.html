@@ -1,697 +1,234 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-SG">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Toh Yong Jie | Cyber Security</title>
-    <meta name="description" content="Portfolio of Toh Yong Jie - Computer Science Student, Cyber Security Major, IT Support Engineer based in Singapore.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons (Reliable CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: { 900: '#09090B', 800: '#111827', 700: '#1F2937' },
-                        brand: { blue: '#3B82F6', violet: '#8B5CF6', green: '#22C55E', rose: '#F43F5E' }
-                    },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    borderRadius: { '4xl': '2rem' }
-                }
-            }
-        }
-    </script>
-    <style>
-        html, body { 
-            background-color: #09090B; 
-            color: #F8FAFC; 
-            overflow-x: hidden;
-            max-width: 100vw;
-        }
-        .glass { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .glass-hover:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-4px); }
-        .gradient-text { background: linear-gradient(to right, #60A5FA, #A78BFA, #F0ABFC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        .pulse-slow { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-        
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #09090B; }
-        ::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #374151; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toh Yong Jie | Cybersecurity &amp; IT Graduate, Singapore</title>
+<meta name="description" content="Toh Yong Jie: B.CompSci (Cyber Security) student at University of Wollongong, Diploma in Infocomm Security Management (Republic Polytechnic), IT support and SAF Military Police experience. Open to SOC, security and IT roles in Singapore.">
+<meta name="author" content="Toh Yong Jie">
+<link rel="canonical" href="https://tohyj0101.github.io/">
+<meta property="og:title" content="Toh Yong Jie | Cybersecurity &amp; IT, Singapore">
+<meta property="og:description" content="Cybersecurity student with IT support and military security experience. Open to internships and graduate roles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tohyj0101.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314213D'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%23fff'%3EYJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Toh Yong Jie","url":"https://tohyj0101.github.io/","email":"mailto:tohyj0101@gmail.com","jobTitle":"Cybersecurity and IT Support","address":{"@type":"PostalAddress","addressCountry":"SG"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Wollongong"},{"@type":"CollegeOrUniversity","name":"Republic Polytechnic"}],"sameAs":["https://github.com/tohyj0101","https://linkedin.com/in/tohyj"]}
+</script>
+<style>
+:root{
+  --paper:#F5F6F8; --card:#FFFFFF; --ink:#14213D; --muted:#4A5568; --line:#D9DDE4;
+  --red:#C8281E; --blue:#1D4ED8; --mark:#FFF3B0;
+  --head:'Bricolage Grotesque',system-ui,sans-serif; --body:'Public Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#0F1626;--card:#16203A;--ink:#EEF1F7;--muted:#AEB8CB;--line:#2A3552;--red:#FF6B5E;--blue:#8FB0FF;--mark:#5A4B00}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--card);padding:.5rem 1rem;z-index:99}
 
-        #particle-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-    </style>
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:1rem}
+.logo{font:800 1.1rem var(--head);text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+@media(max-width:560px){nav li:nth-child(n+3):not(:last-child){display:none}nav ul{gap:.9rem}}
+
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--ink);font-size:.95rem}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--red);border-color:var(--red);color:#fff}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+.hero{padding:4rem 0 3rem;border-bottom:1px solid var(--line)}
+.hero .grid{display:grid;gap:2.5rem;grid-template-columns:1.25fr 1fr;align-items:start}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.035em}
+.hero h1 span{color:var(--red)}
+.pitch{font-size:1.2rem;margin:1.25rem 0 0;max-width:34rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.glance{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);border-radius:6px;padding:1.25rem 1.4rem}
+.glance h2{font-size:1.05rem;margin-bottom:.75rem}
+.glance dl{margin:0;display:grid;grid-template-columns:7.5rem 1fr;gap:.55rem .75rem;font-size:.93rem}
+.glance dt{color:var(--muted)}.glance dd{margin:0;font-weight:500}
+
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:-.02em;margin-bottom:1.75rem}
+.lead{max-width:40rem;color:var(--muted);margin:-1rem 0 1.75rem}
+
+.job{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 2rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+@media(max-width:700px){.job{grid-template-columns:1fr}}
+.when{color:var(--muted);font-size:.9rem}
+.job h3{font-size:1.25rem}.org{color:var(--muted);margin:.15rem 0 .75rem;font-weight:500}
+ul.tight{margin:0;padding-left:1.1rem}ul.tight li{margin:.35rem 0}
+
+.cards{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.3rem;display:flex;flex-direction:column}
+.card h3{font-size:1.15rem;margin-bottom:.5rem}.card p{margin:0 0 .8rem;font-size:.95rem}
+.tags{margin-top:auto;font-size:.82rem;color:var(--muted)}
+.card a.more{margin-top:.75rem;font-weight:600;font-size:.92rem}
+
+.cols{display:grid;gap:1.5rem 2.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.cols h3{font-size:1rem;margin-bottom:.4rem}.cols p{margin:0;color:var(--muted);font-size:.95rem}
+.edu{display:grid;gap:1.25rem}.edu div{display:grid;grid-template-columns:11rem 1fr;gap:.25rem 2rem}
+@media(max-width:700px){.edu div{grid-template-columns:1fr}}
+.edu b{font-weight:600}
+
+.todo{background:var(--mark);padding:0 .25em;border-radius:3px}
+.links{display:grid;gap:.6rem;max-width:32rem;margin-top:1.5rem}
+.links a{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 1rem;background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none;font-weight:500}
+.links a:hover{border-color:var(--ink)}.links span{color:var(--muted);font-weight:400}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.25rem;align-items:start}
+.badges:empty{display:none}
+.badge{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.9rem;text-align:center;text-decoration:none;font-size:.85rem;font-weight:500}
+.badge img{width:100%;height:auto;display:block;margin-bottom:.5rem}
+.badge:hover{border-color:var(--ink)}
+footer{padding:2rem 0;color:var(--muted);font-size:.85rem}
+</style>
 </head>
-<body class="font-sans antialiased selection:bg-brand-blue/30 selection:text-white">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Scroll Progress Bar -->
-    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-brand-blue via-brand-violet to-pink-500 z-[100] transition-all duration-150" style="width: 0%"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Toh Yong Jie</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
 
-    <!-- Navbar -->
-    <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
-        <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#home" class="flex items-center gap-2">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-blue to-brand-violet flex items-center justify-center shadow-lg shadow-brand-blue/20">
-                    <i data-lucide="shield" class="w-5 h-5 text-white"></i>
-                </div>
-                <span class="font-bold tracking-tight text-white">TOH<span class="text-brand-blue">.</span>YJ</span>
-            </a>
-            
-            <!-- Desktop Menu (Education Removed) -->
-            <ul class="hidden lg:flex items-center gap-6 text-sm text-slate-300">
-                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                <li><a href="#experience" class="hover:text-white transition-colors">Experience</a></li>
-                <li><a href="#skills" class="hover:text-white transition-colors">Skills</a></li>
-                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-            </ul>
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <h1>Toh Yong Jie<br><span>Cybersecurity &amp; IT</span></h1>
+      <p class="pitch">Computer Science student (Cyber Security) with IT support experience, a polytechnic infocomm security diploma, Military Police service and industry badges. I want to start as a SOC analyst, security engineer or IT security associate in Singapore.</p>
+      <div class="cta">
+        <a class="btn primary" href="resume/Toh-Yong-Jie-Resume.pdf" download>Download resume (PDF)</a>
+        <a class="btn ghost" href="mailto:tohyj0101@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://linkedin.com/in/tohyj" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <aside class="glance" aria-label="Summary for recruiters">
+      <h2>At a glance</h2>
+      <dl>
+        <dt>Looking for</dt><dd>Internship or graduate role: SOC, incident response, DevSecOps, IT security</dd>
+        <dt>Available from</dt><dd><span class="todo">[Month YYYY]</span></dd>
+        <dt>Based in</dt><dd>Singapore. Singapore citizen, no work pass needed</dd>
+        <dt>National Service</dt><dd>Full-time NS completed, SAF Military Police <span class="todo">[ORD month/year]</span></dd>
+        <dt>Studying</dt><dd>B.CompSci (Cyber Security), University of Wollongong, <span class="todo">[expected grad month/year]</span></dd>
+        <dt>Prior diploma</dt><dd>Infocomm Security Management, Republic Polytechnic</dd>
+      </dl>
+    </aside>
+  </div>
+</div>
 
-            <a href="#contact" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet text-white text-sm font-medium shadow-lg hover:shadow-brand-violet/40 transition-all">
-                <i data-lucide="send" class="w-4 h-4"></i> Hire Me
-            </a>
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="when">Sep 2022 – Jan 2023</div>
+    <div>
+      <h3>IT Support Engineer (Intern)</h3>
+      <div class="org">A-ChieveMent Solution (S) Pte Ltd</div>
+      <ul class="tight">
+        <li>Resolved <span class="todo">[X]</span> desktop and Windows support tickets per week, <span class="todo">[e.g. within the SLA / first-time fix rate]</span>.</li>
+        <li>Deployed and maintained <span class="todo">[X]</span> workstations, including imaging, hardware swaps and user account setup.</li>
+        <li>Diagnosed LAN/WLAN faults and restored connectivity for end users.</li>
+        <li><span class="todo">[Add one thing you improved or documented, e.g. a how-to guide that cut repeat tickets]</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when"><span class="todo">[Mon YYYY]</span> – <span class="todo">[Mon YYYY]</span><br>Full-time NS</div>
+    <div>
+      <h3>Military Police</h3>
+      <div class="org">Singapore Armed Forces</div>
+      <ul class="tight">
+        <li>Controlled access to sensitive installations: verified identity and authorisation, and logged entries.</li>
+        <li>Responded to security incidents following set procedures and escalation chains, calmly and under pressure.</li>
+        <li>Ran guard and patrol duties on rotating shifts, where a missed detail has real consequences.</li>
+        <li><span class="todo">[Add rank/appointment, team size led, or commendation if any]</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
 
-            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white">
-                <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
-        </nav>
-        
-        <!-- Mobile Menu (Education Removed) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-dark-900/95 backdrop-blur-xl border-t border-white/5">
-            <ul class="flex flex-col p-4 gap-2 text-slate-200">
-                <li><a href="#about" class="block px-4 py-3 rounded-lg hover:bg-white/5">About</a></li>
-                <li><a href="#experience" class="block px-4 py-3 rounded-lg hover:bg-white/5">Experience</a></li>
-                <li><a href="#skills" class="block px-4 py-3 rounded-lg hover:bg-white/5">Skills</a></li>
-                <li><a href="#contact" class="block px-4 py-3 rounded-lg hover:bg-white/5">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+<section id="certs"><div class="wrap">
+  <h2>Certifications and badges</h2>
+  <div id="badges" class="badges" aria-live="polite"></div>
+  <div class="links">
+    <a href="https://www.credly.com/users/toh-yong-jie" target="_blank" rel="noopener">All badges on Credly <span>Verified by issuer</span></a>
+    <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" rel="noopener">Credential.net wallet <span>Verified by issuer</span></a>
+    <a href="https://www.myskillsfuture.gov.sg/csp/public/profile/93zwqwnup404c8" target="_blank" rel="noopener">SkillsFuture Skills Passport <span>myskillsfuture.gov.sg</span></a>
+  </div>
+</div></section>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-20">
-        <canvas id="particle-canvas"></canvas>
-        
-        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-blue/20 rounded-full blur-[120px] -z-10 pulse-slow"></div>
-        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-violet/20 rounded-full blur-[120px] -z-10 pulse-slow"></div>
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="cols">
+    <div><h3>Security operations</h3><p>Incident response, log analysis, access control, threat observation, MITRE ATT&amp;CK</p></div>
+    <div><h3>Programming</h3><p>Python, Java, JavaScript/TypeScript, SQL, Bash</p></div>
+    <div><h3>Systems and networking</h3><p>Windows administration, Linux, TCP/IP, LAN/WLAN troubleshooting, hardware deployment</p></div>
+    <div><h3>Tools</h3><p>Git and GitHub, <span class="todo">[SIEM, Wireshark, Nmap, Burp Suite, Docker: list only what you can demo]</span></p></div>
+  </div>
+</div></section>
 
-        <div class="relative max-w-7xl mx-auto px-6 w-full py-16 z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 fade-in-up">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 mb-6">
-                        <span class="relative flex w-2 h-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
-                            <span class="relative inline-flex rounded-full w-2 h-2 bg-brand-green"></span>
-                        </span>
-                        Available for internship & Job Opportunities
-                    </div>
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><span class="when">Current</span><span><b>Bachelor of Computer Science, Cyber Security major</b><br>University of Wollongong<br><span class="todo">[Add GPA/WAM, honours, or relevant modules if strong]</span></span></div>
+    <div><span class="when">2020 – 2023</span><span><b>Diploma in Infocomm Security Management</b><br>Republic Polytechnic<br><span class="todo">[Add GPA, final-year project, or awards]</span></span></div>
+  </div>
+</div></section>
 
-                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter text-white leading-[0.9]">
-                        TOH <span class="block gradient-text">YONG JIE</span>
-                    </h1>
+<section id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="lead">I reply to recruiters and hiring managers within 24 hours. Interviews are easy to arrange anywhere in Singapore.</p>
+  <div class="links">
+    <a href="mailto:tohyj0101@gmail.com">Email <span>tohyj0101@gmail.com</span></a>
+    <a href="https://linkedin.com/in/tohyj" target="_blank" rel="noopener">LinkedIn <span>linkedin.com/in/tohyj</span></a>
+    <a href="https://github.com/tohyj0101" target="_blank" rel="noopener">GitHub <span>tohyj0101</span></a>
+  </div>
+</div></section>
+</main>
 
-                    <div class="mt-6 flex items-center gap-2 text-lg sm:text-2xl font-medium text-slate-200 min-h-[2rem]">
-                        <span class="text-slate-500 shrink-0">&gt;</span>
-                        <span id="typing-text" class="break-words"></span>
-                        <span class="w-[2px] h-6 bg-brand-blue animate-pulse shrink-0"></span>
-                    </div>
-
-                    <p class="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        I'm a Computer Science student majoring in Cyber Security with experience in IT support, networking, system administration, and security operations.
-                    </p>
-
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <a href="#" class="inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet text-white text-sm sm:text-base font-medium shadow-lg shadow-brand-violet/30 hover:shadow-brand-violet/60 transition-all hover:scale-105">
-                            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
-                        </a>
-                        <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3 rounded-full bg-white/5 border border-white/10 text-white text-sm sm:text-base hover:bg-white/10 transition-all">
-                            <i data-lucide="mail" class="w-4 h-4"></i> Contact Me
-                        </a>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-5 relative fade-in-up w-full flex justify-center">
-                    <div class="relative w-full max-w-xs sm:max-w-sm">
-                        <div class="absolute -inset-4 bg-gradient-to-br from-brand-blue/30 to-brand-violet/30 rounded-4xl blur-2xl"></div>
-                        <div class="relative rounded-4xl overflow-hidden glass shadow-2xl">
-                            <div class="aspect-square bg-dark-700 flex items-center justify-center">
-                                <i data-lucide="user" class="w-24 h-24 text-slate-600"></i>
-                            </div>
-                            <div class="p-5 space-y-3">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <div class="text-white font-semibold">Toh Yong Jie</div>
-                                        <div class="text-slate-400 text-sm">CS Student · Cyber Sec</div>
-                                    </div>
-                                    <div class="flex items-center gap-1 text-xs text-slate-300 shrink-0">
-                                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-blue"></i> SG
-                                    </div>
-                                </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">Cybersecurity</span>
-                                    <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">IT Support</span>
-                                    <span class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">Singaporean</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOC Dashboard -->
-    <section class="relative py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Security Operations Console
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">SOC — Candidate Dashboard</h2>
-            <p class="mt-4 text-slate-400 text-lg">A real-time snapshot of my current status and operational background.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">Status</div>
-                        <div class="mt-2 text-xl font-semibold text-white">Available</div>
-                        <div class="text-sm text-slate-400 mt-1">Internship / Job</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="activity" class="w-5 h-5 text-brand-green"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">Current Education</div>
-                        <div class="mt-2 text-xl font-semibold text-white">B.CompSci</div>
-                        <div class="text-sm text-slate-400 mt-1">Cyber Security Major</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-blue"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">Location</div>
-                        <div class="mt-2 text-xl font-semibold text-white">Singapore</div>
-                        <div class="text-sm text-slate-400 mt-1">SG · UTC+8</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-violet/20 border border-brand-violet/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="map-pin" class="w-5 h-5 text-brand-violet"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">Experience</div>
-                        <div class="mt-2 text-xl font-semibold text-white">IT Support Intern</div>
-                        <div class="text-sm text-slate-400 mt-1">A-ChieveMent Solution</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="briefcase" class="w-5 h-5 text-amber-400"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">National Service</div>
-                        <div class="mt-2 text-xl font-semibold text-white">SAF Military Police</div>
-                        <div class="text-sm text-slate-400 mt-1">Security Operations</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-brand-rose/20 border border-brand-rose/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="shield" class="w-5 h-5 text-brand-rose"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-5 glass-hover transition-all duration-300 fade-in-up">
-                <div class="flex items-start justify-between">
-                    <div>
-                        <div class="text-xs uppercase tracking-widest text-slate-500">Focus Area</div>
-                        <div class="mt-2 text-xl font-semibold text-white">Cyber Defence</div>
-                        <div class="text-sm text-slate-400 mt-1">SecOps · IR · DevSecOps</div>
-                    </div>
-                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center shrink-0">
-                        <i data-lucide="lock" class="w-5 h-5 text-cyan-400"></i>
-                    </div>
-                </div>
-                <div class="mt-4 flex items-center gap-2 text-[11px] text-slate-500">
-                    <span class="relative flex w-1.5 h-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span><span class="relative inline-flex rounded-full w-1.5 h-1.5 bg-brand-green"></span></span>
-                    LIVE · SYNCED
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="relative py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="user" class="w-3.5 h-3.5"></i> About Me
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">A builder, defender, and lifelong learner.</h2>
-        </div>
-
-        <div class="max-w-3xl mx-auto space-y-6 text-slate-300 leading-relaxed fade-in-up text-center sm:text-left">
-            <p>I'm <span class="text-white font-semibold">Toh Yong Jie</span>, a Computer Science student at the University of Wollongong majoring in <span class="text-brand-blue">Cyber Security</span>. I'm passionate about protecting people and systems, crafting clean software, and translating complex problems into simple, reliable solutions.</p>
-            <p>My journey spans <span class="text-white">IT support</span>, <span class="text-white">system administration</span>, <span class="text-white">military security operations</span>, and modern <span class="text-white">full-stack development</span>.</p>
-            
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6">
-                <div class="flex flex-col items-center gap-3 px-3 py-4 rounded-xl bg-white/5 border border-white/10 text-center"><i data-lucide="shield" class="w-5 h-5 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Cybersecurity</span></div>
-                <div class="flex flex-col items-center gap-3 px-3 py-4 rounded-xl bg-white/5 border border-white/10 text-center"><i data-lucide="code" class="w-5 h-5 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Software Eng</span></div>
-                <div class="flex flex-col items-center gap-3 px-3 py-4 rounded-xl bg-white/5 border border-white/10 text-center"><i data-lucide="brain" class="w-5 h-5 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Continuous Learning</span></div>
-                <div class="flex flex-col items-center gap-3 px-3 py-4 rounded-xl bg-white/5 border border-white/10 text-center"><i data-lucide="target" class="w-5 h-5 text-brand-blue shrink-0"></i><span class="text-sm text-slate-200">Problem Solving</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="relative py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Education
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">My Academic Journey</h2>
-        </div>
-
-        <div class="max-w-3xl mx-auto relative fade-in-up">
-            <div class="absolute left-5 top-2 bottom-2 w-px bg-gradient-to-b from-brand-blue via-brand-violet to-transparent"></div>
-            <div class="space-y-6">
-                <div class="relative pl-14">
-                    <div class="absolute left-0 w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div>
-                    <div class="glass rounded-2xl p-4">
-                        <div class="text-xs text-slate-500 uppercase tracking-widest">Primary</div>
-                        <div class="text-white font-semibold mt-1">Bukit Panjang Primary School</div>
-                    </div>
-                </div>
-                <div class="relative pl-14">
-                    <div class="absolute left-0 w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5 text-white"></i></div>
-                    <div class="glass rounded-2xl p-4">
-                        <div class="text-xs text-slate-500 uppercase tracking-widest">Secondary</div>
-                        <div class="text-white font-semibold mt-1">Chua Chu Kang Secondary School</div>
-                    </div>
-                </div>
-                <div class="relative pl-14">
-                    <div class="absolute left-0 w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i></div>
-                    <div class="glass rounded-2xl p-4">
-                        <div class="text-xs text-slate-500 uppercase tracking-widest">2020 – 2023</div>
-                        <div class="text-white font-semibold mt-1">Republic Polytechnic</div>
-                        <div class="text-sm text-slate-400 mt-1">Diploma in Infocomm Security Management</div>
-                    </div>
-                </div>
-                <div class="relative pl-14">
-                    <div class="absolute left-0 w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue to-brand-violet border border-white/20 shadow-lg shadow-brand-violet/40 flex items-center justify-center"><i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i></div>
-                    <div class="glass rounded-2xl p-4 border-brand-blue/30">
-                        <div class="text-xs text-brand-blue uppercase tracking-widest">Current</div>
-                        <div class="text-white font-semibold mt-1">University of Wollongong</div>
-                        <div class="text-sm text-slate-400 mt-1">Bachelor of Computer Science</div>
-                        <div class="text-xs text-brand-blue mt-1">Major: Cyber Security</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="relative py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Experience
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Where I've shipped and served.</h2>
-        </div>
-
-        <div class="space-y-8">
-            <div class="glass rounded-3xl p-6 sm:p-8 fade-in-up relative overflow-hidden">
-                <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
-                <div class="relative flex flex-wrap items-center justify-between gap-4">
-                    <div>
-                        <div class="text-sm text-slate-400 flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i> Internship</div>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white mt-1">IT Support Engineer (Intern)</h3>
-                        <div class="text-brand-blue mt-1 text-sm sm:text-base">A-ChieveMent Solution (S) Pte Ltd</div>
-                    </div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300 shrink-0">
-                        <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i> Sep 2022 – Jan 2023
-                    </div>
-                </div>
-                <ul class="relative mt-6 grid sm:grid-cols-2 gap-3">
-                    <li class="flex items-start gap-3 text-slate-300 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-brand-green shrink-0"></i>Desktop support & troubleshooting</li>
-                    <li class="flex items-start gap-3 text-slate-300 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-brand-green shrink-0"></i>Windows administration</li>
-                    <li class="flex items-start gap-3 text-slate-300 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-brand-green shrink-0"></i>Hardware maintenance & deployment</li>
-                    <li class="flex items-start gap-3 text-slate-300 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-brand-green shrink-0"></i>Network troubleshooting (LAN/WLAN)</li>
-                </ul>
-            </div>
-
-            <div class="glass rounded-3xl p-6 sm:p-8 fade-in-up relative overflow-hidden">
-                <div class="absolute -top-20 -left-20 w-64 h-64 bg-brand-rose/10 rounded-full blur-3xl"></div>
-                <div class="relative flex flex-wrap items-center justify-between gap-4">
-                    <div>
-                        <div class="text-sm text-slate-400 flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> National Service</div>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white mt-1">Military Police</h3>
-                        <div class="text-brand-rose mt-1 text-sm sm:text-base">Singapore Armed Forces</div>
-                    </div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300 shrink-0">
-                        <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i> Full-time NS
-                    </div>
-                </div>
-                <div class="relative mt-6 flex flex-wrap gap-3">
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-200 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose shadow-[0_0_10px] shadow-brand-rose"></span>Security Operations</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-200 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose shadow-[0_0_10px] shadow-brand-rose"></span>Access Control</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-200 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose shadow-[0_0_10px] shadow-brand-rose"></span>Incident Response</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-200 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose shadow-[0_0_10px] shadow-brand-rose"></span>Threat Observation</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-slate-200 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose shadow-[0_0_10px] shadow-brand-rose"></span>Guard & Patrol</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="relative py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Technical Skills
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">What I build, secure and operate.</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass rounded-2xl p-6 fade-in-up">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-blue to-cyan-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="code" class="w-5 h-5 text-white"></i></div>
-                    <h3 class="text-white font-semibold text-lg">Programming</h3>
-                </div>
-                <div class="space-y-4">
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Python</span><span class="text-slate-500">85%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-blue to-cyan-400 skill-bar" data-width="85%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Java</span><span class="text-slate-500">75%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-blue to-cyan-400 skill-bar" data-width="75%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">JavaScript / TS</span><span class="text-slate-500">80%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-blue to-cyan-400 skill-bar" data-width="80%"></div></div></div>
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-6 fade-in-up">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-violet to-fuchsia-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="shield" class="w-5 h-5 text-white"></i></div>
-                    <h3 class="text-white font-semibold text-lg">Cyber Security</h3>
-                </div>
-                <div class="space-y-4">
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Incident Response</span><span class="text-slate-500">80%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-violet to-fuchsia-400 skill-bar" data-width="80%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Security Ops</span><span class="text-slate-500">85%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-violet to-fuchsia-400 skill-bar" data-width="85%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Access Control</span><span class="text-slate-500">85%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-violet to-fuchsia-400 skill-bar" data-width="85%"></div></div></div>
-                </div>
-            </div>
-            <div class="glass rounded-2xl p-6 fade-in-up">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green to-teal-400 flex items-center justify-center shadow-lg shrink-0"><i data-lucide="network" class="w-5 h-5 text-white"></i></div>
-                    <h3 class="text-white font-semibold text-lg">Networking & Systems</h3>
-                </div>
-                <div class="space-y-4">
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">TCP/IP</span><span class="text-slate-500">80%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-green to-teal-400 skill-bar" data-width="80%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Windows / Linux</span><span class="text-slate-500">80%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-green to-teal-400 skill-bar" data-width="80%"></div></div></div>
-                    <div><div class="flex justify-between text-xs mb-1"><span class="text-slate-200">Troubleshooting</span><span class="text-slate-500">85%</span></div><div class="h-2 rounded-full bg-white/5 overflow-hidden"><div class="h-full bg-gradient-to-r from-brand-green to-teal-400 skill-bar" data-width="85%"></div></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="relative py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14 fade-in-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-blue mb-4">
-                <i data-lucide="mail" class="w-3.5 h-3.5"></i> Contact
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Let's build something secure together.</h2>
-            <p class="mt-4 text-slate-400 text-lg">Open for internship and job opportunities.</p>
-        </div>
-
-        <div class="max-w-2xl mx-auto">
-            <div class="glass rounded-3xl p-6 sm:p-8 flex flex-col fade-in-up">
-                <div class="text-white text-2xl font-semibold">Reach out directly</div>
-                <p class="text-slate-400 mt-2 text-sm sm:text-base">Whether it's a role, a project, or just a chat about cybersecurity — I'd love to hear from you.</p>
-                <div class="mt-8 space-y-3 flex-1">
-                    
-                    <a href="mailto:tohyj0101@gmail.com" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                            <i data-lucide="mail" class="w-5 h-5 text-brand-blue"></i>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest">Email</div>
-                            <div class="text-white text-sm sm:text-base truncate">tohyj0101@gmail.com</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <a href="https://github.com/tohyj0101" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest">GitHub</div>
-                            <div class="text-white text-sm sm:text-base truncate">tohyj0101</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <a href="https://linkedin.com/in/tohyj" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest">LinkedIn</div>
-                            <div class="text-white text-sm sm:text-base truncate">tohyj</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <a href="https://www.credential.net/profile/tohyongjie/wallet" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                            <i data-lucide="award" class="w-5 h-5 text-brand-blue"></i>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest">Credential.net</div>
-                            <div class="text-white text-sm sm:text-base truncate">View Wallet</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <a href="https://www.credly.com/users/toh-yong-jie" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-violet/20 border border-brand-violet/30 flex items-center justify-center shrink-0">
-                            <i data-lucide="badge-check" class="w-5 h-5 text-brand-violet"></i>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest">Credly</div>
-                            <div class="text-white text-sm sm:text-base truncate">View Badges</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <a href="https://www.myskillsfuture.gov.sg/csp/public/profile/93zwqwnup404c8" target="_blank" class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
-                        <div class="w-10 h-10 rounded-xl bg-brand-blue/20 border border-brand-blue/30 flex items-center justify-center shrink-0">
-                            <i data-lucide="briefcase" class="w-5 h-5 text-brand-blue"></i>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs text-slate-500 uppercase tracking-widest truncate">myskillsfuture.gov.sg</div>
-                            <div class="text-white text-sm sm:text-base break-words">View Careers & Skills Passport</div>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 shrink-0"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/5 py-10 px-6 mt-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
-            <div class="flex items-center gap-2">
-                <i data-lucide="shield" class="w-4 h-4 text-brand-blue"></i>
-                © 2026 Toh Yong Jie. All rights reserved.
-            </div>
-            <div class="flex items-center gap-2 text-xs text-slate-500">
-                Built with <span class="text-slate-300">HTML</span> · <span class="text-slate-300">Tailwind CSS</span> · <span class="text-slate-300">Vanilla JS</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-
-            const phrases = ["Computer Science Student", "Cyber Security Enthusiast", "Software Developer", "IT Support Engineer", "Tech Problem Solver"];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingEl = document.getElementById('typing-text');
-
-            function type() {
-                if (!typingEl) return;
-                const currentPhrase = phrases[phraseIndex];
-                if (isDeleting) {
-                    typingEl.textContent = currentPhrase.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                let typeSpeed = isDeleting ? 50 : 100;
-
-                if (!isDeleting && charIndex === currentPhrase.length) {
-                    typeSpeed = 2000;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-                    typeSpeed = 500;
-                }
-                setTimeout(type, typeSpeed);
-            }
-            type();
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        if (entry.target.classList.contains('skill-bar')) {
-                            entry.target.style.width = entry.target.getAttribute('data-width');
-                        }
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-            document.querySelectorAll('.skill-bar').forEach(el => {
-                el.style.width = '0%';
-                el.style.transition = 'width 1.2s cubic-bezier(0.22, 1, 0.36, 1)';
-                observer.observe(el);
-            });
-
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.scrollY;
-                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercent = (scrollTop / docHeight) * 100;
-                const progressBar = document.getElementById('scroll-progress');
-                if (progressBar) progressBar.style.width = `${scrollPercent}%`;
-                
-                const navbar = document.getElementById('navbar');
-                if (navbar) {
-                    if (scrollTop > 50) {
-                        navbar.classList.add('bg-dark-900/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
-                    } else {
-                        navbar.classList.remove('bg-dark-900/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
-                    }
-                }
-            });
-
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            const canvas = document.getElementById('particle-canvas');
-            if (canvas) {
-                const ctx = canvas.getContext('2d');
-                let particles = [];
-
-                function resizeCanvas() {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-                }
-                resizeCanvas();
-                window.addEventListener('resize', resizeCanvas);
-
-                class Particle {
-                    constructor() {
-                        this.x = Math.random() * canvas.width;
-                        this.y = Math.random() * canvas.height;
-                        this.vx = (Math.random() - 0.5) * 0.5;
-                        this.vy = (Math.random() - 0.5) * 0.5;
-                        this.radius = Math.random() * 2 + 1;
-                    }
-                    update() {
-                        this.x += this.vx;
-                        this.y += this.vy;
-                        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-                    }
-                    draw() {
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                        ctx.fillStyle = 'rgba(139, 92, 246, 0.5)';
-                        ctx.fill();
-                    }
-                }
-
-                function initParticles() {
-                    particles = [];
-                    const count = Math.min(100, Math.floor((canvas.width * canvas.height) / 15000));
-                    for (let i = 0; i < count; i++) particles.push(new Particle());
-                }
-                initParticles();
-
-                function connectParticles() {
-                    for (let i = 0; i < particles.length; i++) {
-                        for (let j = i + 1; j < particles.length; j++) {
-                            const dx = particles[i].x - particles[j].x;
-                            const dy = particles[i].y - particles[j].y;
-                            const dist = Math.sqrt(dx * dx + dy * dy);
-                            if (dist < 150) {
-                                ctx.beginPath();
-                                ctx.strokeStyle = `rgba(59, 130, 246, ${1 - dist / 150})`;
-                                ctx.lineWidth = 0.5;
-                                ctx.moveTo(particles[i].x, particles[i].y);
-                                ctx.lineTo(particles[j].x, particles[j].y);
-                                ctx.stroke();
-                            }
-                        }
-                    }
-                }
-
-                function animate() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    particles.forEach(p => { p.update(); p.draw(); });
-                    connectParticles();
-                    requestAnimationFrame(animate);
-                }
-                animate();
-            }
-        });
-    </script>
+<footer><div class="wrap">© 2026 Toh Yong Jie · Singapore</div></footer>
+<script>
+/* 1) Credly badges: paste each badge's ID (the UUID in its Credly share URL). The official Credly embed draws them. */
+const CREDLY_BADGE_IDS = [
+  // "00000000-0000-0000-0000-000000000000",
+];
+/* 2) Other badges (Credential.net etc.): save the badge image into /badges/ and list it here. */
+const OTHER_BADGES = [
+  // { img: "badges/example.png", name: "Certificate name", url: "https://..." },
+];
+const box = document.getElementById('badges');
+CREDLY_BADGE_IDS.forEach(id => {
+  const d = document.createElement('div');
+  d.setAttribute('data-iframe-width','150'); d.setAttribute('data-iframe-height','270');
+  d.setAttribute('data-share-badge-id',id); d.setAttribute('data-share-badge-host','https://www.credly.com');
+  box.appendChild(d);
+});
+OTHER_BADGES.forEach(b => {
+  const a = document.createElement('a'); a.className='badge'; a.href=b.url; a.target='_blank'; a.rel='noopener';
+  a.innerHTML = '<img loading="lazy" alt=""><span></span>';
+  a.querySelector('img').src=b.img; a.querySelector('span').textContent=b.name; box.appendChild(a);
+});
+if (CREDLY_BADGE_IDS.length) { const sc=document.createElement('script'); sc.async=true; sc.src='https://cdn.credly.com/assets/utilities/embed.js'; document.body.appendChild(sc); }
+</script>
 </body>
 </html>
